@@ -1,0 +1,132 @@
+body {
+	background: #1FA3AF;
+}
+.header-wrap {
+	background: #009CE3;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+.header {
+	height: 44px;
+	background: #F2F2F2;
+	margin-top: 4px;
+	color: #666666;
+	width: 100%;
+	position: relative;
+	.title {
+		line-height: 44px;
+		text-align: center;
+	}
+	.logo {
+		position: absolute;
+		left: 8px;
+		top: 10px;
+		background: url(images/h-l.png) center center no-repeat;
+		width: 51px;
+		height: 25px;
+		display: inline-block;
+	}
+	.head-right {
+		position: absolute;
+		right: 0;
+		top: 0;
+		background: #F2F2F2;
+		.h-icon {
+			line-height: 44px;
+			padding: 0 10px; 
+		}
+		.r-line {
+			border-right: 1px solid #D8D8D8;
+		}
+		.user-info {
+			cursor: pointer;
+			position: relative;
+			display: inline-block;
+			&:hover {
+				background: #eaeaea;
+			}
+			.user-bk {
+				background: rgba(54,62,67,0.98);
+				padding: 10px 10px;
+				position: absolute;
+				top: 66px;
+				right: 10px;
+				color: #FFF;
+				width: 130px;
+			}
+			.arr-up {
+				top: -32px;
+				left: 66px;
+			}
+		}
+	}
+}
+.arr {
+	display: block;
+	position: absolute;
+	border-style: solid;
+	border-width: 16px;
+	width: 0;
+	height: 0;
+	border-color: transparent;
+	border-bottom-color: rgba(54,62,67,0.98);
+	&:before {
+
+		background: rgba(255,255,255,0.01);
+		content: "";
+		display: block;
+		pointer-events: all;
+		-ms-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+		position: absolute;
+		z-index: -1
+	}
+}
+.arr-up {
+	&:before {
+		margin-top: .25rem;
+		margin-left: -0.75rem;
+		width: 1.5rem;
+		height: 1.5rem
+	}
+}
+.arr-up {
+	&:after {
+		border-bottom-color: rgba(54,62,67,0.98);
+	}
+}
+.footer {
+	background: rgba(54,62,67,0.98);
+	height: 48px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: right;
+	.link {
+		color: #FFF;
+		margin: 4px 8px;
+		padding: 0 8px;
+		line-height: 40px;
+		display: inline-block;
+		height: 40px;
+		&:hover {
+			background: #555;
+			border-radius: 4px;
+		}
+	}
+
+}
+/*字体颜色*/
+.f666 {
+	color: #666666;
+}
+
+
+
+
+
+
