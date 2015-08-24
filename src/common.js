@@ -163,11 +163,11 @@ $.extend(gl, function(){
 		}
 	}
 
-	function block(text, handle){
+	function block(handle){
 		$.blockUI && $.blockUI({ 
 			fadeIn: 1000, 
 			fadeOut: 1000,
-			message: '<div class="import-load"></div><span>'+text+'</span>',
+			message: '<div class="load-img icon-spin3 animate-spin"></div>',
 			overlayCSS: { 
 				opacity: .2
 			},
