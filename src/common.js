@@ -172,16 +172,12 @@ $.extend(gl, function(){
 				opacity: .2
 			},
 			css: { 
+				'border': 'none',
 				'left': '50%',
 				'width': '200px',
 				'margin-left': '-100px',
-				'border': '1px solid #000',
-				'padding': '5px',
-				'-webkit-border-radius': '10px',
-				'-moz-border-radius': '10px',
 				'opacity': 1,
-				'backgroundColor': '#fff',
-				'color': '#fff'
+				'background': 'transparent'
 			},
 			onBlock: handle
 		});
