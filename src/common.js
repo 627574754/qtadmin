@@ -167,7 +167,7 @@ $.extend(gl, function(){
 		$.blockUI && $.blockUI({ 
 			fadeIn: 1000, 
 			fadeOut: 1000,
-			message: '<div class="load-img icon-spin3 animate-spin"></div>',
+			message: '<div id="fiori2-loader"><div class="fiori2-blossom"><div class="fiori2-leafContainer fiori2-leafContainer1"><div class="fiori2-leaf fiori2-leaf1"></div></div><div class="fiori2-leafContainer fiori2-leafContainer2"><div class="fiori2-leaf fiori2-leaf2"></div></div><div class="fiori2-leafContainer fiori2-leafContainer3"><div class="fiori2-leaf fiori2-leaf3"></div></div><div class="fiori2-leafContainer fiori2-leafContainer4"><div class="fiori2-leaf fiori2-leaf4"></div></div><div class="fiori2-leafContainer fiori2-leafContainer5"><div class="fiori2-leaf fiori2-leaf5"></div></div></div></div>',
 			overlayCSS: { 
 				opacity: .2
 			},
