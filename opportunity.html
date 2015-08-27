@@ -9,6 +9,7 @@
 <meta content="telephone=no,email=no" name="format-detection"/>
 <link rel="apple-touch-icon" href="favicon.png"/>
 <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="vendor/fontello/css/animation.css">
 <link rel="stylesheet" type="text/css" href="assets/style.css">
 <title>Opportunity</title>
 </head>
@@ -143,37 +144,38 @@
 			<p class="nav-des">ADCOM COMPUTER Seatle WA 9800-1111</p>
 			<p class="nav-des">Perry Jlonson Denner CO 73238</p>
 			<div class="navbar">
-				<div class="item-wrap active">
+				<div class="item-wrap active navTab">
 					<i class="ico icon-info"></i>
 					<p>INFO</p>
 				</div>
-				<div class="item-wrap">
+				<div class="item-wrap navTab">
 					<i class="ico icon-sitemap"></i>
 					<p>Sale Area</p>
 				</div>
-				<div class="item-wrap">
+				<div class="item-wrap navTab">
 					<i class="ico icon-chart-line"></i>
 					<p>products</p>
 				</div>
-				<div class="item-wrap">
+				<div class="item-wrap navTab">
 					<i class="ico icon-doc-text"></i>
 					<p>Notes</p>
 				</div>
-				<div class="item-wrap">
+				<div class="item-wrap navTab">
 					<i class="ico icon-attach-1"></i>
 					<p>attachments</p>
 				</div>
-				<div class="item-wrap">
+				<div class="item-wrap navTab">
 					<i class="ico icon-users"></i>
 					<p>participants</p>
 				</div>
-				<div class="item-wrap">
+				<div class="item-wrap navTab">
 					<i class="ico icon-contacts"></i>
 					<p>transation</p>
 				</div>
 			</div>
 		</div>
-		<div class="cnt-content none">
+		<!--info-->
+		<div class="cnt-content tabCnt tabCnt">
 			<div class="group">
 				<label class="label">Type：</label>
 				<span class="cnt-txt">Oppornity Including Sale Methodology</span>
@@ -197,7 +199,8 @@
 				<span class="cnt-txt">Oppornity Including Sale Methodology</span>
 			</div>
 		</div>
-		<div class="cnt-content none">
+		<!--Sale Area-->
+		<div class="cnt-content tabCnt none">
 			<div class="cnt-title">Sales Area<i class="i-edit icon-pencil"></i></div>
 			<div class="group">
 				<label class="label">Type：</label>
@@ -214,7 +217,8 @@
 				<span class="cnt-txt">Oppornity Including Sale Methodology</span>
 			</div>
 		</div>
-		<div class="cnt-content none">
+		<!--products-->
+		<div class="cnt-content tabCnt none">
 			<table class="table">
 				<thead>
 					<tr>
@@ -246,8 +250,356 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="cnt-content">
-			<div class="reply-wrap"></div>
+		<!--Notes-->
+		<div class="cnt-content tabCnt none">
+			<div class="reply-wrap">
+				<div class="h-icon"><img src="assets/images/h-pic.png"></div>
+				<div class="area-wrap">
+					<textarea class="area" rows="1" cols="20" placeholder="请输入内容"></textarea>
+					<div class="sub-arr icon-todo icon-plus"></div>
+				</div>
+			</div>
+			<div class="btm-tip">No notes are currently available</div>
+		</div>
+		<!--attachments-->
+		<div id="attchWrap" class="cnt-content tabCnt none">
+			<div class="list-title">
+				<div class="lt-l f25 icon-plus"></div>
+                <form id="uploadBtn" enctype="multipart/form-data" class="upload-btn"> 
+                    <input type="file"  class="file-btn" name="filePath" id="fileUploadBtn" />
+                </form>
+				<div class="lt-r">Attachments(20)</div>
+			</div>
+			<div class="aths-item-wrap">
+				<div class="lt-l f30 icon-doc-text"></div>
+				<div class="aths-item">
+					<div>
+						<a href="#" class="fblue">testtest</a>
+						<p>Jun 29, 2015 by Salesrep</p>
+					</div>
+					<input class="edit-ipt none" type="text" value="testtest">
+				</div>
+				<div class="lt-r">
+					<i class="aths-icon-edit icon-pencil attchEdit"></i>
+					<i class="aths-icon-del icon-cancel"></i>
+				</div>
+			</div>
+			<div class="aths-item-wrap">
+				<div class="lt-l f30 icon-doc-text"></div>
+				<div class="aths-item">
+					<div>
+						<a href="#" class="fblue">testtest</a>
+						<p>Jun 29, 2015 by Salesrep</p>
+					</div>
+					<input class="edit-ipt none" type="text" value="testtest">
+				</div>
+				<div class="lt-r">
+					<i class="aths-icon-edit icon-pencil attchEdit"></i>
+					<i class="aths-icon-del icon-cancel"></i>
+				</div>
+			</div>
+			<div class="aths-item-wrap">
+				<div class="lt-l f30 icon-doc-text"></div>
+				<div class="aths-item">
+					<div>
+						<a href="#" class="fblue">testtest</a>
+						<p>Jun 29, 2015 by Salesrep</p>
+					</div>
+					<input class="edit-ipt none" type="text" value="testtest">
+				</div>
+				<div class="lt-r">
+					<i class="aths-icon-edit icon-pencil attchEdit"></i>
+					<i class="aths-icon-del icon-cancel"></i>
+				</div>
+			</div>
+			<div class="aths-item-wrap">
+				<div class="lt-l f30 icon-doc-text"></div>
+				<div class="aths-item">
+					<div>
+						<a href="#" class="fblue">testtest</a>
+						<p>Jun 29, 2015 by Salesrep</p>
+					</div>
+					<input class="edit-ipt none" type="text" value="testtest">
+				</div>
+				<div class="lt-r">
+					<i class="aths-icon-edit icon-pencil attchEdit"></i>
+					<i class="aths-icon-del icon-cancel"></i>
+				</div>
+			</div>
+			<div class="aths-item-wrap">
+				<div class="lt-l f30 icon-doc-text"></div>
+				<div class="aths-item">
+					<div>
+						<a href="#" class="fblue">testtest</a>
+						<p>Jun 29, 2015 by Salesrep</p>
+					</div>
+					<input class="edit-ipt none" type="text" value="testtest">
+				</div>
+				<div class="lt-r">
+					<i class="aths-icon-edit icon-pencil attchEdit"></i>
+					<i class="aths-icon-del icon-cancel"></i>
+				</div>
+			</div>
+			<div class="aths-item-wrap">
+				<div class="lt-l f30 icon-doc-text"></div>
+				<div class="aths-item">
+					<div>
+						<a href="#" class="fblue">testtest</a>
+						<p>Jun 29, 2015 by Salesrep</p>
+					</div>
+					<input class="edit-ipt none" type="text" value="testtest">
+				</div>
+				<div class="lt-r">
+					<i class="aths-icon-edit icon-pencil attchEdit"></i>
+					<i class="aths-icon-del icon-cancel"></i>
+				</div>
+			</div>
+		</div>
+		<!--participants-->
+		<div class="cnt-content tabCnt none">
+			<div class="list-title">
+				<div class="lt-l">participants(5)</div>
+				<div class="lt-r f25 icon-plus"></div>
+			</div>
+			<div class="par-list">
+				<div class="par-head icon-user"></div>
+				<div class="par-item">
+					<a href="#" class="fblue">testtest</a>
+					<p><span class="fb">Partner Function：</span>Payer</p>
+					<p><i class="icon-todo icon-volume-up"></i>+14845521604</p>
+				</div>
+				<div class="par-r">
+					<i class="mr40 icon-pencil"></i>
+					<i class="icon-cancel"></i>
+				</div>
+			</div>
+			<div class="par-list">
+				<div class="par-head icon-user"></div>
+				<div class="par-item">
+					<a href="#" class="fblue">testtest</a>
+					<p><span class="fb">Partner Function：</span>Payer</p>
+					<p><i class="icon-todo icon-volume-up"></i>+14845521604</p>
+				</div>
+				<div class="par-r">
+					<i class="mr40 icon-pencil"></i>
+					<i class="icon-cancel"></i>
+				</div>
+			</div>
+			<div class="par-list">
+				<div class="par-head icon-user"></div>
+				<div class="par-item">
+					<a href="#" class="fblue">testtest</a>
+					<p><span class="fb">Partner Function：</span>Payer</p>
+					<p><i class="icon-todo icon-volume-up"></i>+14845521604</p>
+				</div>
+				<div class="par-r">
+					<i class="mr40 icon-pencil"></i>
+					<i class="icon-cancel"></i>
+				</div>
+			</div>
+			<div class="par-list">
+				<div class="par-head icon-user"></div>
+				<div class="par-item">
+					<a href="#" class="fblue">testtest</a>
+					<p><span class="fb">Partner Function：</span>Payer</p>
+					<p><i class="icon-todo icon-volume-up"></i>+14845521604</p>
+				</div>
+				<div class="par-r">
+					<i class="mr40 icon-pencil"></i>
+					<i class="icon-cancel"></i>
+				</div>
+			</div>
+			<div class="par-list">
+				<div class="par-head icon-user"></div>
+				<div class="par-item">
+					<a href="#" class="fblue">testtest</a>
+					<p><span class="fb">Partner Function：</span>Payer</p>
+					<p><i class="icon-todo icon-volume-up"></i>+14845521604</p>
+				</div>
+				<div class="par-r">
+					<i class="mr40 icon-pencil"></i>
+					<i class="icon-cancel"></i>
+				</div>
+			</div>
+			<div class="par-list">
+				<div class="par-head icon-user"></div>
+				<div class="par-item">
+					<a href="#" class="fblue">testtest</a>
+					<p><span class="fb">Partner Function：</span>Payer</p>
+					<p><i class="icon-todo icon-volume-up"></i>+14845521604</p>
+				</div>
+				<div class="par-r">
+					<i class="mr40 icon-pencil"></i>
+					<i class="icon-cancel"></i>
+				</div>
+			</div>
+		</div>
+		<!--transation-->
+		<div id="tstWrap" class="cnt-content tabCnt none">
+			<table class="table mt0">
+				<thead>
+					<tr>
+						<th>Transaction ID</th>
+						<th>Transaction Type</th>
+						<th>Description</th>
+						<th>Created On</th>
+						<th>Relation Type</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="fblue">123312</td>
+						<td>Lead</td>
+						<td>Meeting with<br/> Customer Gargans Group</td>
+						<td>Feb 4, 2014</td>
+						<td>Preceding document</td>
+					</tr>
+					<tr>
+						<td class="fblue">11111</td>
+						<td>Appointment</td>
+						<td>Meeting with<br/> Gargans Groupngsdg</td>
+						<td>Jun 15, 2015</td>
+						<td>Next document</td>
+					</tr>
+					<tr>
+						<td class="fblue">11111</td>
+						<td>Appointment</td>
+						<td>Meeting with<br/> Gargans Groupngsdg</td>
+						<td>Jun 15, 2015</td>
+						<td>Next document</td>
+					</tr>
+					<tr>
+						<td class="fblue">123312</td>
+						<td>Lead</td>
+						<td>Meeting with<br/> Customer Gargans Group</td>
+						<td>Feb 4, 2014</td>
+						<td>Preceding document</td>
+					</tr>
+					<tr>
+						<td class="fblue">123312</td>
+						<td>Lead</td>
+						<td>Meeting with<br/> Customer Gargans Group</td>
+						<td>Feb 4, 2014</td>
+						<td>Preceding document</td>
+					</tr>
+					<tr>
+						<td class="fblue">11111</td>
+						<td>Appointment</td>
+						<td>Meeting with<br/> Gargans Groupngsdg</td>
+						<td>Jun 15, 2015</td>
+						<td>Next document</td>
+					</tr>
+					<tr>
+						<td class="fblue">11111</td>
+						<td>Appointment</td>
+						<td>Meeting with<br/> Gargans Groupngsdg</td>
+						<td>Jun 15, 2015</td>
+						<td>Next document</td>
+					</tr>
+					<tr>
+						<td class="fblue">123312</td>
+						<td>Lead</td>
+						<td>Meeting with<br/> Customer Gargans Group</td>
+						<td>Feb 4, 2014</td>
+						<td>Preceding document</td>
+					</tr>
+					<tr>
+						<td class="fblue">11111</td>
+						<td>Appointment</td>
+						<td>Meeting with<br/> Gargans Groupngsdg</td>
+						<td>Jun 15, 2015</td>
+						<td>Next document</td>
+					</tr>
+					<tr>
+						<td class="fblue">11111</td>
+						<td>Appointment</td>
+						<td>Meeting with<br/> Gargans Groupngsdg</td>
+						<td>Jun 15, 2015</td>
+						<td>Next document</td>
+					</tr>
+					<tr>
+						<td class="fblue">11111</td>
+						<td>Appointment</td>
+						<td>Meeting with<br/> Gargans Groupngsdg</td>
+						<td>Jun 15, 2015</td>
+						<td>Next document</td>
+					</tr>
+					<tr>
+						<td class="fblue">11111</td>
+						<td>Appointment</td>
+						<td>Meeting with<br/> Gargans Groupngsdg</td>
+						<td>Jun 15, 2015</td>
+						<td>Next document</td>
+					</tr>
+					<tr>
+						<td class="fblue">11111</td>
+						<td>Appointment</td>
+						<td>Meeting with<br/> Gargans Groupngsdg</td>
+						<td>Jun 15, 2015</td>
+						<td>Next document</td>
+					</tr>
+					<tr>
+						<td class="fblue">11111</td>
+						<td>Appointment</td>
+						<td>Meeting with<br/> Gargans Groupngsdg</td>
+						<td>Jun 15, 2015</td>
+						<td>Next document</td>
+					</tr>
+					<tr>
+						<td class="fblue">123312</td>
+						<td>Lead</td>
+						<td>Meeting with<br/> Customer Gargans Group</td>
+						<td>Feb 4, 2014</td>
+						<td>Preceding document</td>
+					</tr>
+					<tr>
+						<td class="fblue">11111</td>
+						<td>Appointment</td>
+						<td>Meeting with<br/> Gargans Groupngsdg</td>
+						<td>Jun 15, 2015</td>
+						<td>Next document</td>
+					</tr>
+					<tr>
+						<td class="fblue">11111</td>
+						<td>Appointment</td>
+						<td>Meeting with<br/> Gargans Groupngsdg</td>
+						<td>Jun 15, 2015</td>
+						<td>Next document</td>
+					</tr>
+					<tr>
+						<td class="fblue">123312</td>
+						<td>Lead</td>
+						<td>Meeting with<br/> Customer Gargans Group</td>
+						<td>Feb 4, 2014</td>
+						<td>Preceding document</td>
+					</tr>
+					<tr>
+						<td class="fblue">11111</td>
+						<td>Appointment</td>
+						<td>Meeting with<br/> Gargans Groupngsdg</td>
+						<td>Jun 15, 2015</td>
+						<td>Next document</td>
+					</tr>
+					<tr>
+						<td class="fblue">11111</td>
+						<td>Appointment</td>
+						<td>Meeting with<br/> Gargans Groupngsdg</td>
+						<td>Jun 15, 2015</td>
+						<td>Next document</td>
+					</tr>
+					<tr>
+						<td class="fblue">11111</td>
+						<td>Appointment</td>
+						<td>Meeting with<br/> Gargans Groupngsdg</td>
+						<td>Jun 15, 2015</td>
+						<td>Next document</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="table-more moreData">
+				<p class="more-txt fb f333">More</p>
+				<p class="more-page"><span class="curNum"></span>/<span class="totolNum"></span></p>
+			</div>
 		</div>
 	</div>
 	<div class="page-bottom">
@@ -270,6 +622,8 @@
 	<a href="#" class="link">privacy</a>
 </div>
 <script src="src/lib/jquery/jquery,qw.core.js"></script>
+<script src="src/lib/jquery/jquery-form.js"></script>
+<script src="src/lib/jquery/jquery-blockUI.js"></script>
 <script src="src/common.js"></script>
 <script src="src/opportunity.js"></script>
 </body>
