@@ -201,8 +201,8 @@ th {
 	-webkit-opacity: 0.5;
 	opacity: 0.5;
 	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
-filter: alpha(opacity=50)
-	}
+    filter: alpha(opacity=50)
+}
 
 .fiori2-leafContainer1 {
 	-webkit-animation-duration: 4s;
@@ -390,8 +390,8 @@ filter: alpha(opacity=50)
 	-webkit-opacity: 0.5;
 	opacity: 0.5;
 	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
-filter: alpha(opacity=50)
-	}
+    filter: alpha(opacity=50)
+}
 
 
 @-webkit-keyframes rotateBlossom {
@@ -1084,6 +1084,81 @@ filter: alpha(opacity=50)
 	}
 }
 
+/*dialog*/
+.ui-dialog-mask{
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #000;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    width: 100%;
+}
+.ui-dialog-pop{
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2000;
+    background-color: #fff;
+    border: 1px solid #999;
+    border: 1px solid #666768;;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    outline: none;
+    .ui-dialog-hd{
+        line-height: 48px;
+        position: relative;
+        font-style: normal;
+        background: #f2f2f2;
+        font-size: 16px;
+        height: 48px;
+        color: #666;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+    }
+    .ui-dialog-bd{
+        margin: 20px;
+    }
+    .ui-dialog-close{
+        position: absolute;
+        right: 5px;
+        cursor: default;
+        line-height: 12px;
+        font-size: 36px;
+        color: #777;
+        top: 10px;
+        cursor: pointer;
+    }
+    .ui-dialog-ft{
+        background: #333c42;
+        text-align: right;
+        padding: 4px 0;
+        .ui-dialog-button {
+            margin-right: 15px;
+        }
+    }
+    .button{
+        margin-right: 15px;
+        padding: 0 12px;
+        height: 48px;
+        display: inline-block;
+        line-height: 48px;
+        cursor: pointer;
+        color: #fff;
+        border-radius: 3px;
+        &:hover{
+            background: #444d52;
+        }
+    }
+}
 
 
 

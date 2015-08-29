@@ -1,1 +1,59 @@
-@media screen and (max-width:640px){.header .logo{display:none}.header .head-right .user-info .arr-up{left:116px}.header .title{text-align:center;max-width:415px}.header .user-name,.header .user-name i{display:none}}@media screen and (max-width:640px){.container-list{max-width:29.6rem}.container-list .list .item1{width:19rem;height:9rem}.container-list .list .item2{width:9.25rem;height:9rem}}@media screen and (min-width:641px) and (max-width:824px){.container-list{max-width:36.5rem}}@media screen and (min-width:825px) and (max-width:1024px){.container-list{max-width:48.5rem}}@media screen and (min-width:1025px) and (max-width:1280px){.container-list{max-width:60.5rem}}@media screen and (min-width:1281px){.container-list{max-width:72.5rem}}@media screen and (min-width:1280px){.container-opp{width:1280px;left:50%;margin-left:-640px}}
+/*列表页 头部响应式*/
+@media screen and (max-width: 640px) {
+  .header .logo {
+    display: none;
+  }
+  .header .head-right .user-info .arr-up {
+    left: 116px;
+  }
+  .header .title {
+    text-align: center;
+    max-width: 415px;
+  }
+  .header .user-name,
+  .header .user-name i {
+    display: none;
+  }
+}
+/*列表页 列表响应式*/
+@media screen and (max-width: 640px) {
+  .container-list {
+    max-width: 29.6rem;
+  }
+  .container-list .list .item1 {
+    width: 19rem;
+    height: 9rem;
+  }
+  .container-list .list .item2 {
+    width: 9.25rem;
+    height: 9rem;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 824px) {
+  .container-list {
+    max-width: 36.5rem;
+  }
+}
+@media screen and (min-width: 825px) and (max-width: 1024px) {
+  .container-list {
+    max-width: 48.5rem;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .container-list {
+    max-width: 60.5rem;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .container-list {
+    max-width: 72.5rem;
+  }
+}
+/*opportunity页面 响应式*/
+@media screen and (min-width: 1280px) {
+  .container-opp {
+    width: 1280px;
+    left: 50%;
+    margin-left: -640px;
+  }
+}
