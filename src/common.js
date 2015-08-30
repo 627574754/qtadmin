@@ -183,13 +183,29 @@ $.extend(gl, function(){
 		});
 	}
 
+	//底部初始化
+	function initBottom(handle) {
+		//显示操作列表
+		var list;
+		handle.on('click', function() {
+			list = $(this).prev();
+			list.fadeIn('fast');
+		});
+		$('body').click(function(e){
+			if (list && handle[0] !== e.target && !($.contains(list[0], e.target))) {
+				list.hide();
+			}
+		});
+	}
+
 	return {
 		initPager: initPager,
 		initSelect: initSelect,
 		initPop: initPop,
 		initCheckBox: initCheckBox,
 		initQuery: initQuery,
-		block: block
+		block: block,
+		initBottom: initBottom
 	};
 }());
 

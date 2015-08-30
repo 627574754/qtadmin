@@ -33,7 +33,7 @@
 	</div>
 </div>
 <div class="container container-opp">
-	<div class="opp-title">
+	<div class="page-title">
 		<div class="tl-left">
 			<i class="i-back icon-forward icon-todo"></i>
 			Opportunities(5)
@@ -144,7 +144,7 @@
 			<p class="nav-des">ADCOM COMPUTER Seatle WA 9800-1111</p>
 			<p class="nav-des">Perry Jlonson Denner CO 73238</p>
 			<div class="navbar">
-				<div class="item-wrap active navTab">
+				<div class="item-wrap cur navTab">
 					<i class="ico icon-info"></i>
 					<p>INFO</p>
 				</div>
@@ -601,16 +601,26 @@
 				<p class="more-page"><span class="curNum"></span>/<span class="totolNum"></span></p>
 			</div>
 		</div>
+		<div class="btm-right">
+			<a href="#" class="btm-link active">Edit</a>
+			<a href="#" class="btm-link">Follow Up</a>
+			<a href="#" class="btm-link">message</a>
+			<a href="#" class="btm-link icon-forward">privacy</a>
+		</div>
 	</div>
 	<div class="page-bottom">
 		<div class="btm-left">
-			<i class="i-btm icon-todo  icon-plus"></i>
-			<i class="i-btm  icon-plus"></i>
+			<div class="h-list-wrap hList" style="display:none;">
+				<div class="h-item">Closing Date(Ascending)</div>
+				<div class="h-item">Closing Date(Descending)</div>
+				<div class="h-item">Account(Ascending)</div>
+				<div class="h-item">Account(Descending)</div>
+				<div class="h-item">status(Ascending)</div>
+				<div class="h-item">status(Descending)</div>
+			</div>
+			<i id="btmHandle" class="i-btm icon-todo icon-plus"></i>
+			<i id="btmAdd" class="i-btm  icon-plus"></i>
 		</div>
-		<a href="#" class="link active">Edit</a>
-		<a href="#" class="link">Follow Up</a>
-		<a href="#" class="link">message</a>
-		<a href="#" class="link icon-forward">privacy</a>
 	</div>
 </div>
 <div class="footer">
@@ -620,6 +630,24 @@
 	<a href="#" class="link">SAP.com</a>
 	<a href="#" class="link">Legal Disclosure</a>
 	<a href="#" class="link">privacy</a>
+</div>
+<div id="addDlg" class="dialog none">
+	<div class="dl-content">
+		<div class="dl-search">
+			<input class="search-ipt" placeholder="Search">
+			<i class="dls-icon icon-search"></i>
+		</div>
+		<div class="dl-list-wrap">
+			<div class="list-item">
+				<p class="f333">Opportunity</p>
+				<p>OPPT</p>
+			</div>
+			<div class="list-item">
+				<p class="f333">Opportunity Including Sales Methodlogy</p>
+				<p>OPSM</p>
+			</div>
+		</div>
+	</div>
 </div>
 <script src="src/lib/jquery/jquery,qw.core.js"></script>
 <script src="src/lib/jquery/jquery-form.js"></script>
