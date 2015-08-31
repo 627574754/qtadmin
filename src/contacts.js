@@ -67,32 +67,31 @@
 		txt.toggleClass('none');
 		$(this).toggleClass('icon-cog-outline');
 	});
-	//transaction 列表加载
-	function loadTstTable() {
-		var tbody = $('#tstWrap tbody');
-		var moreBtn = $('#tstWrap .moreData');
+	//note回复列表加载
+	function loadNoteReturn() {
+		var list = $('#noteWrap .noteList');
+		var moreBtn = $('#noteWrap .moreData');
 		var curNum = moreBtn.find('.curNum');
 		var totolNum = moreBtn.find('.totolNum');
-		var tn = tbody.find('tr').length;
-		var cn = 10;
-		var steep = 10;
-		//初始化展示表格，默认展示10条
-		console.log(tn,curNum,totolNum)
-		tbody.find('tr:gt('+cn+')').addClass('none');
+		var tn = list.find('.nItem').length;
+		var cn = 4;
+		var steep = 4;
+		//初始化展示表格，默认展示4条
+		list.find('.nItem:gt('+cn+')').addClass('none');
 		curNum.text(cn);
 		totolNum.text(tn);
 		moreBtn.on('click', function() {
 			
-			//每点击一下展开10条数据
+			//每点击一下展开4条数据
 			if(cn + steep >= tn) {
 				//没有下一页了
 				moreBtn.addClass('none');
-				tbody.find('tr').removeClass('none');
+				list.find('.nItem').removeClass('none');
 			}
 			else {
 				cn += steep;
 				curNum.text(cn);
-				tbody.find('tr:lt('+cn+')').removeClass('none');
+				list.find('.nItem:lt('+cn+')').removeClass('none');
 			}
 
 		});
@@ -101,26 +100,11 @@
 	function initHandle() {
 		//底部初始化
 		var handle = $('#btmHandle');
-		var add = $('#btmAdd');
+		var filter = $('#btmFilter');
 		//列表分类搜索操作
 		gl.initBottom(handle);
-		//添加
-		var addDlgHtml = $('#addDlg').html();
-		var addDlg = new gl.Dialog({
-			title: 'Select transaction Type', //窗口标题的html，如果不设置则无标题
-			content: addDlgHtml,
-			//窗口内容的html，必须是html格式不能是无格式纯文本，如果不设置则无内容
-			beforeClose: null, //调用close方法时执行的callback，如果此callback返回false则会阻止窗口的关闭
-			showClose: false,
-			showFooter: true,
-			className: '', //窗口最外层容器的类名
-			cache: true, //是否缓存。若为false则close()的时候会remove掉对话框对应的dom元素
-			width: '40%' //窗口宽度，如不传递默认为40%
-		});
-		add.on('click', function() {
-			console.log('ss')
-			addDlg.open();
-		});
+		//筛选 全部/打开
+		gl.initBottom(filter);
 	}
 	
 
@@ -128,23 +112,11 @@
 	tabSwitch();
 	//attachments 上传文件
 	fileUpload();
-	//transaction 列表加载
-	loadTstTable();
+	//加载note回复列表
+	loadNoteReturn();
 	//初始化页面
 	initHandle()
 
-	var dialog = new gl.Dialog({
-		title: '系统提示', //窗口标题的html，如果不设置则无标题
-		content: '<div class="ui-dialog-bd"><p>欢迎！</p></div>',
-		//窗口内容的html，必须是html格式不能是无格式纯文本，如果不设置则无内容
-		beforeClose: null, //调用close方法时执行的callback，如果此callback返回false则会阻止窗口的关闭
-		showClose: false,
-		showFooter: true,
-		className: '', //窗口最外层容器的类名
-		cache: true, //是否缓存。若为false则close()的时候会remove掉对话框对应的dom元素
-		width: '40%' //窗口宽度，如不传递默认为40%
-	});
-	// dialog.open();
 })();
 
 

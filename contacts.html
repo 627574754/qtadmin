@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<!--允许全屏-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="yes" name="apple-touch-fullscreen"/>
+<meta content="telephone=no,email=no" name="format-detection"/>
+<link rel="apple-touch-icon" href="favicon.png"/>
+<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="vendor/fontello/css/animation.css">
+<link rel="stylesheet" type="text/css" href="assets/style.css">
+<title>联系人</title>
+</head>
+<body>
+<div class="header-wrap">
+	<div class="header">
+		<div class="logo"></div>
+		<h4 class="title">SAP Fiori,Demo Cloud Edition</h4>
+		<div class="head-right">
+			<i class="h-icon icon-cloud r-line"></i>
+			<i class="h-icon icon-info r-line"></i>
+			<div class="user-info pop-btn">
+				<i class="h-icon icon-user"></i>
+				<span class="user-name">Demo User <i class="h-icon icon-user todo"></i></span>
+				<div class="user-bk pop-wrap none">
+					<i class="icon-bullhorn"></i>Give Feedback
+					<span class="arr arr-up"> </span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container container-opp">
+	<div class="page-title">
+		<div class="tl-left">
+			<i class="i-back icon-forward icon-todo"></i>
+			我的联系人(5)
+		</div>
+		<div class="tl-right">联系人</div>
+	</div>
+	<div class="opp-list-wrap">
+		<div class="search-wrap">
+			<input class="search-ipt" placeholder="Search">
+			<i class="i-ipt i1 icon-search"></i>
+			<i class="i-ipt i2 icon-spin3"></i>
+		</div>
+		<div class="list-contact">
+			<div class="list-con-index">D</div>
+			<div class="list-item">
+				<div class="con-pic icon-user"></div>
+				<div class="con-name">张三</div>
+				<div class="con-des">备注备注</div>
+			</div>
+			<div class="list-item">
+				<div class="con-pic icon-user"></div>
+				<div class="con-name">张三</div>
+				<div class="con-des">备注备注</div>
+			</div>
+			<div class="list-item">
+				<div class="con-pic icon-user"></div>
+				<div class="con-name">张三</div>
+				<div class="con-des">备注备注<span class="fr f000">主要联系人</span></div>
+			</div>
+			<div class="list-con-index">S</div>
+			<div class="list-item">
+				<div class="con-pic icon-user"></div>
+				<div class="con-name">张三</div>
+				<div class="con-des">备注备注</div>
+			</div>
+			<div class="list-item">
+				<div class="con-pic icon-user"></div>
+				<div class="con-name">张三</div>
+				<div class="con-des">备注备注</div>
+			</div>
+			<div class="list-item">
+				<div class="con-pic icon-user"></div>
+				<div class="con-name">张三</div>
+				<div class="con-des">备注备注<span class="fr f000">主要联系人</span></div>
+			</div>
+			<div class="list-con-index">Z</div>
+			<div class="list-item">
+				<div class="con-pic icon-user"></div>
+				<div class="con-name">张三</div>
+				<div class="con-des">备注备注</div>
+			</div>
+			<div class="list-item">
+				<div class="con-pic icon-user"></div>
+				<div class="con-name">张三</div>
+				<div class="con-des">备注备注</div>
+			</div>
+			<div class="list-item">
+				<div class="con-pic icon-user"></div>
+				<div class="con-name">张三</div>
+				<div class="con-des">备注备注<span class="fr f000">主要联系人</span></div>
+			</div>
+		</div>
+	</div>
+	<div class="opp-cnt-wrap con-cnt-wrap">
+		<div class="cnt-nav">
+			<div class="con-nav-title"><i class="con-i-nav icon-user"></i><div class="con-name">张三</div>
+			</div>
+			<p class="nav-des f14">备注备注</p>
+			<div class="navbar">
+				<div class="item-wrap cur navTab">
+					<i class="ico icon-info"></i>
+					<p>INFO</p>
+				</div>
+				<div class="item-wrap navTab">
+					<i class="ico icon-doc-text"></i>
+					<p>Notes</p>
+				</div>
+				<div class="item-wrap navTab">
+					<i class="ico icon-attach-1"></i>
+					<p>attachments</p>
+				</div>
+			</div>
+		</div>
+		<!--info-->
+		<div class="cnt-content con-info-cnt tabCnt">
+			<div class="info-group">
+				<label class="info-label">手机号：</label>
+				<a href="#" class="info-txt fblue">+15739384710</a>
+			</div>
+			<div class="info-group">
+				<label class="info-label">电话：</label>
+				<a href="#" class="info-txt fblue">+023-42736183</a>
+			</div>
+			<div class="info-group">
+				<label class="info-label">邮箱：</label>
+				<a href="#" class="info-txt fblue">503718374@qq.com</a>
+			</div>
+			<div class="info-group">
+				<label class="info-label">地址：</label>
+				<a href="#" class="info-txt">重庆市南岸区五公里</a>
+			</div>
+		</div>
+		<!--Notes-->
+		<div class="cnt-content tabCnt none" id="noteWrap">
+			<div class="reply-wrap">
+				<div class="h-icon"><img src="assets/images/h-pic.png"></div>
+				<div class="area-wrap">
+					<textarea class="area" rows="1" cols="20" placeholder="请输入内容"></textarea>
+					<div class="sub-arr icon-todo icon-plus"></div>
+				</div>
+			</div>
+			<div class="note-list-wrap noteList">
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+				<div class="note-list-item nItem">
+					<p class="note-msg f000 fb">张三：你好！</p>
+					<p>2015-10-20 10:10:10</p>
+				</div>
+			</div>
+			<div class="table-more moreData">
+				<p class="more-txt fb f333">More</p>
+				<p class="more-page"><span class="curNum"></span>/<span class="totolNum"></span></p>
+			</div>
+			<!-- <div class="btm-tip">No notes are currently available</div> -->
+		</div>
+		<!--attachments-->
+		<div id="attchWrap" class="cnt-content tabCnt none">
+			<div class="list-title">
+				<div class="lt-l f25 icon-plus"></div>
+				<form id="uploadBtn" enctype="multipart/form-data" class="upload-btn"> 
+					<input type="file"  class="file-btn" name="filePath" id="fileUploadBtn" />
+				</form>
+				<div class="lt-r">Attachments(20)</div>
+			</div>
+			<div class="aths-item-wrap">
+				<div class="lt-l f30 icon-doc-text"></div>
+				<div class="aths-item">
+					<div>
+						<a href="#" class="fblue">testtest</a>
+						<p>Jun 29, 2015 by Salesrep</p>
+					</div>
+					<input class="edit-ipt none" type="text" value="testtest">
+				</div>
+				<div class="lt-r">
+					<i class="aths-icon-edit icon-pencil attchEdit"></i>
+					<i class="aths-icon-del icon-cancel"></i>
+				</div>
+			</div>
+			<div class="aths-item-wrap">
+				<div class="lt-l f30 icon-doc-text"></div>
+				<div class="aths-item">
+					<div>
+						<a href="#" class="fblue">testtest</a>
+						<p>Jun 29, 2015 by Salesrep</p>
+					</div>
+					<input class="edit-ipt none" type="text" value="testtest">
+				</div>
+				<div class="lt-r">
+					<i class="aths-icon-edit icon-pencil attchEdit"></i>
+					<i class="aths-icon-del icon-cancel"></i>
+				</div>
+			</div>
+			<div class="aths-item-wrap">
+				<div class="lt-l f30 icon-doc-text"></div>
+				<div class="aths-item">
+					<div>
+						<a href="#" class="fblue">testtest</a>
+						<p>Jun 29, 2015 by Salesrep</p>
+					</div>
+					<input class="edit-ipt none" type="text" value="testtest">
+				</div>
+				<div class="lt-r">
+					<i class="aths-icon-edit icon-pencil attchEdit"></i>
+					<i class="aths-icon-del icon-cancel"></i>
+				</div>
+			</div>
+			<div class="aths-item-wrap">
+				<div class="lt-l f30 icon-doc-text"></div>
+				<div class="aths-item">
+					<div>
+						<a href="#" class="fblue">testtest</a>
+						<p>Jun 29, 2015 by Salesrep</p>
+					</div>
+					<input class="edit-ipt none" type="text" value="testtest">
+				</div>
+				<div class="lt-r">
+					<i class="aths-icon-edit icon-pencil attchEdit"></i>
+					<i class="aths-icon-del icon-cancel"></i>
+				</div>
+			</div>
+			<div class="aths-item-wrap">
+				<div class="lt-l f30 icon-doc-text"></div>
+				<div class="aths-item">
+					<div>
+						<a href="#" class="fblue">testtest</a>
+						<p>Jun 29, 2015 by Salesrep</p>
+					</div>
+					<input class="edit-ipt none" type="text" value="testtest">
+				</div>
+				<div class="lt-r">
+					<i class="aths-icon-edit icon-pencil attchEdit"></i>
+					<i class="aths-icon-del icon-cancel"></i>
+				</div>
+			</div>
+			<div class="aths-item-wrap">
+				<div class="lt-l f30 icon-doc-text"></div>
+				<div class="aths-item">
+					<div>
+						<a href="#" class="fblue">testtest</a>
+						<p>Jun 29, 2015 by Salesrep</p>
+					</div>
+					<input class="edit-ipt none" type="text" value="testtest">
+				</div>
+				<div class="lt-r">
+					<i class="aths-icon-edit icon-pencil attchEdit"></i>
+					<i class="aths-icon-del icon-cancel"></i>
+				</div>
+			</div>
+		</div>
+		<div class="btm-right">
+			<a href="#" class="btm-link active">Edit</a>
+			<a href="#" class="btm-link icon-forward"></a>
+		</div>
+	</div>
+	<div class="page-bottom">
+		<div class="btm-left" style="margin-left: 185px;">
+			<div class="h-list-wrap pa2 hList" style="display:none;">
+				<div class="h-item">姓</div>
+				<div class="h-item">名</div>
+				<div class="h-item">账号</div>
+			</div>
+			<i id="btmHandle" class="i-btm icon-todo icon-plus"></i>
+			<div class="h-list-wrap pa3 hList" style="display:none;">
+				<div class="h-item">全部联系人</div>
+				<div class="h-item">我的联系人</div>
+			</div>
+			<i id="btmFilter" class="i-btm  icon-plus"></i>
+			<i class="i-btm  icon-plus"></i>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<a href="#" class="link">Terms of us</a>
+	<a href="#" class="link">Copyright</a>
+	<a href="#" class="link">Trademark</a>
+	<a href="#" class="link">SAP.com</a>
+	<a href="#" class="link">Legal Disclosure</a>
+	<a href="#" class="link">privacy</a>
+</div>
+<div id="addDlg" class="dialog none">
+	<div class="dl-content">
+		<div class="dl-search">
+			<input class="search-ipt" placeholder="Search">
+			<i class="dls-icon icon-search"></i>
+		</div>
+		<div class="dl-list-wrap">
+			<div class="list-item">
+				<p class="f333">Opportunity</p>
+				<p>OPPT</p>
+			</div>
+			<div class="list-item">
+				<p class="f333">Opportunity Including Sales Methodlogy</p>
+				<p>OPSM</p>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="src/lib/jquery/jquery,qw.core.js"></script>
+<script src="src/lib/jquery/jquery-form.js"></script>
+<script src="src/lib/jquery/jquery-blockUI.js"></script>
+<script src="src/common.js"></script>
+<script src="src/contacts.js"></script>
+</body>
+</html>
+

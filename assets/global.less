@@ -146,7 +146,7 @@ body {
 .btm-right {
 	position: fixed;
 	bottom: 48px;
-	right: 0;
+	right: 10%;
 	height: 47px;
 	z-index: 1;
 }
@@ -165,6 +165,9 @@ body {
 .active {
 	background: #009CE3;
 	border-radius: 4px;
+	&:hover {
+		background:#007AC3;
+	}
 }
 .page-bottom {
 	position: absolute;
@@ -216,6 +219,18 @@ body {
 				background: #E6F2F9;
 			}
 		}
+	}
+	.pa1 {
+		width:80px;
+		left:45px;
+	}
+	.pa2 {
+		width:80px;
+		left:0;
+	}
+	.pa3 {
+		width:110px;
+		left:45px;
 	}
 }
 /*table*/
@@ -1181,6 +1196,9 @@ th {
 	}
 }
 /*字体颜色*/
+.f000 {
+	color:#000;
+}
 .f666 {
 	color: #666666;
 }
@@ -1198,6 +1216,9 @@ th {
 }
 .f16{
 	font-size: 16px;
+}
+.f18 {
+	font-size: 18px;
 }
 .fblue {
 	color: #0673A8;
@@ -1226,7 +1247,15 @@ th {
 .txc{
 	text-align: center;
 }
-
+.fr {
+	float:right;
+}
+.fl {
+	float:left;
+}
+.lh30 {
+	line-height: 30px;
+}
 .upload-btn {
 	height: 50px;
 	position: absolute;

@@ -125,30 +125,13 @@ $.extend(gl, function(){
 	}
 
 	function initCheckBox(){
-		$(document).on('click', 'td i.ico8', function(e){
-			var me = $(this),
-				table = me.closest('table'),
-				allCk = table.find('th i.ico8');
-
-			if (me.hasClass('ico9')) {
-				me.removeClass('ico9');
-				allCk.removeClass('ico9');
+		$(document).on('click', '.ckbox', function(e){
+			var me = $(this);
+			console.log(me.hasClass('ckbox-cked'))
+			if (me.hasClass('ckbox-cked')) {
+				me.removeClass('ckbox-cked');
 			} else {
-				me.addClass('ico9');
-				if (table.find('td i.ico8:not(.ico9)').length == 0) {
-					allCk.addClass('ico9');
-				}
-			}
-		}).on('click', 'th i.ico8', function(e){
-			var me = $(this),
-				table = me.closest('table');
-
-			if (me.hasClass('ico9')) {
-				me.removeClass('ico9');
-				table.find('td i.ico9').removeClass('ico9');
-			} else {
-				me.addClass('ico9');
-				table.find('td i.ico8').addClass('ico9');
+				me.addClass('ckbox-cked');
 			}
 		});
 	}
