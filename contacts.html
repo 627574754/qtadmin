@@ -1,37 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="utf-8" />
-<!--允许全屏-->
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-<meta content="yes" name="apple-mobile-web-app-capable"/>
-<meta content="yes" name="apple-touch-fullscreen"/>
-<meta content="telephone=no,email=no" name="format-detection"/>
-<link rel="apple-touch-icon" href="favicon.png"/>
-<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon" />
-<link rel="stylesheet" type="text/css" href="vendor/fontello/css/animation.css">
-<link rel="stylesheet" type="text/css" href="assets/style.css">
-<title>联系人</title>
+    <link rel="import" href="_head.html?__inline">
+    <title>联系人</title>
 </head>
 <body>
-<div class="header-wrap">
-	<div class="header">
-		<div class="logo"></div>
-		<h4 class="title">SAP Fiori,Demo Cloud Edition</h4>
-		<div class="head-right">
-			<i class="h-icon icon-cloud r-line"></i>
-			<i class="h-icon icon-info r-line"></i>
-			<div class="user-info pop-btn">
-				<i class="h-icon icon-user"></i>
-				<span class="user-name">Demo User <i class="h-icon icon-user todo"></i></span>
-				<div class="user-bk pop-wrap none">
-					<i class="icon-bullhorn"></i>Give Feedback
-					<span class="arr arr-up"> </span>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+    <link rel="import" href="_header.html?__inline">
 <div class="container container-opp">
 	<div class="page-title">
 		<div class="tl-left">
@@ -365,14 +339,9 @@
 		</div>
 	</div>
 </div>
-<div class="footer">
-	<a href="#" class="link">Terms of us</a>
-	<a href="#" class="link">Copyright</a>
-	<a href="#" class="link">Trademark</a>
-	<a href="#" class="link">SAP.com</a>
-	<a href="#" class="link">Legal Disclosure</a>
-	<a href="#" class="link">privacy</a>
-</div>
+
+<link rel="import" href="_footer.html?__inline">
+
 <div id="addDlg" class="dialog none">
 	<div class="dl-content">
 		<div class="dl-search">
@@ -391,6 +360,7 @@
 		</div>
 	</div>
 </div>
+
 <script src="src/lib/jquery/jquery,qw.core.js"></script>
 <script src="src/lib/jquery/jquery-form.js"></script>
 <script src="src/lib/jquery/jquery-blockUI.js"></script>

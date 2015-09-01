@@ -1,1 +1,23 @@
-.trl-nav-title{color:#000;margin:10px 0 20px}.trl-nav-title .nav-right{float:right;text-align:right}.trl-nav-title .nav-right .txt{display:block;font-size:16px}.trl-nav-des{font-size:14px;color:#666;line-height:15px;margin-top:10px}.trl-table-wrap{background:#DDE6EC;padding-bottom:20px;padding:30px}
+.trl-nav-title {
+  color: #000000;
+  margin: 10px 0 20px 0;
+}
+.trl-nav-title .nav-right {
+  float: right;
+  text-align: right;
+}
+.trl-nav-title .nav-right .txt {
+  display: block;
+  font-size: 16px;
+}
+.trl-nav-des {
+  font-size: 14px;
+  color: #666666;
+  line-height: 15px;
+  margin-top: 10px;
+}
+.trl-table-wrap {
+  background: #DDE6EC;
+  padding-bottom: 20px;
+  padding: 30px;
+}
