@@ -53,10 +53,11 @@
 		}
 		.list{
 			position: absolute;
-			top: 42px;
+			top: 50px;
 			bottom: 0px;
 			width: 100%;
 			overflow-y: auto;
+			background:#FFFFFF;
 			.list-item {
 				padding: 10px;
 				font-size: 16px;
@@ -71,9 +72,10 @@
 						display: inline-block;
 						position: absolute;
 						top: 10px;
-						right: 0;
-						width: 48px;
+						right: 15px;
+						width: 80px;
 						line-height: 18px;
+						text-align: right;
 						.txt {
 							display: block;
 						}
@@ -89,8 +91,11 @@
 					}
 				}
 				&:hover {
-					background: #d9ecf6;
+					background: #F2F2F2;
 				}
+			}
+			.cur{
+				background:#d9ecf6;
 			}
 		}
 	}
@@ -117,6 +122,7 @@
 				}
 				.nav-right {
 					float: right;
+					text-align: right;
 					.txt {
 						display: block;
 						font-size: 16px;
@@ -140,7 +146,7 @@
 						width: 48px;
 						height: 48px;
 						border-radius: 24px;
-						border: 1px solid #007AC3;
+						border: 1px solid #009CE4;
 						background: #FFF;
 						color: #007AC3;
 						line-height: 48px;
@@ -154,9 +160,9 @@
 					}
 				}
 				.cur {
-					border-color: #007AC3;
+					border-color: #009CE4;
 					.ico {
-						background: #007AC3;
+						background: #009CE4;
 						color: #fff;
 					}
 				}
