@@ -121,24 +121,30 @@
 
                     <div class="details-item">
                         <p class="details-title">
-                            Destination:
+                            <em>*</em>Destination:
                         </p>
-                        <p class="details-content">美国</p>
+                        <div>
+                            <p class="details-content">美国</p>
+                            <a href="#" class="icon-plus f25 details-item-add"><span>Add Additional Destination</span></a>
+                        </div>
+
                     </div>
 
                     <div class="details-item">
                         <p class="details-title">
                             Purpose:
                         </p>
-                        <p class="details-content">Customer meeting</p>
+                        <input class="details-content" type="text" value="Customer meeting" />
                     </div>
 
                     <div class="details-item">
                         <p class="details-title">
                             Activity:
                         </p>
-                        <p class="details-content">对客户可开票</p>
+                        <input class="details-content" type="text" value="对客户可开票" />
                     </div>
+
+
 
                     <div class="details-item">
                         <p class="details-title">
@@ -147,10 +153,27 @@
                         <textarea>ADSFADSFAF</textarea>
                     </div>
 
+                    <div class="details-item">
+                        <p class="details-title">
+                            Cost Assignment:
+                        </p>
+                        <p class="details-content">Cost Center</p>
+                        <a href="#" class="icon-plus f25 details-item-add"><span>Add Additional Destination</span></a>
+
+                    </div>
+
 
                 </form>
 
                 <h4>Attachments</h4>
+                <div class="attach-list">
+                    <div class="list-title">
+                        <div class="f25 icon-plus"></div>
+                        <form id="uploadBtn" enctype="multipart/form-data" class="upload-btn">
+                            <input type="file" class="file-btn" name="filePath" id="fileUploadBtn">
+                        </form>
+                    </div>
+                </div>
                 <form>
                     &nbsp;
                 </form>

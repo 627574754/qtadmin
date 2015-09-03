@@ -2513,6 +2513,24 @@ th {
   width: 100%;
   box-sizing: border-box;
 }
+.report-wrapper .details-item-add:before {
+  vertical-align: middle;
+}
+.report-wrapper .details-item-add span {
+  color: #00679e;
+  font-size: 16px;
+  line-height: 25px;
+  vertical-align: middle;
+}
+.report-wrapper .details-item-add:hover {
+  background-color: rgba(222, 222, 222, 0.5);
+}
+.report-wrapper .details-item-add:active {
+  background-color: #007AC3;
+}
+.report-wrapper .details-item-add:active span {
+  color: #fff;
+}
 .report-wrapper textarea {
   color: #000000;
   background-color: #ffffff;
@@ -2527,4 +2545,17 @@ th {
   width: 100%;
   height: 60px;
   box-sizing: border-box;
+}
+.report-wrapper .attach-list {
+  position: relative;
+}
+.report-wrapper .attach-list .list-title .icon-plus {
+  line-height: 50px;
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+.report-wrapper .attach-list .upload-btn {
+  padding: 0;
+  background: transparent;
 }

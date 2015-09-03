@@ -44,6 +44,26 @@
         width: 100%;
         box-sizing: border-box;
     }
+    .details-item-add{
+        &:before{
+            vertical-align: middle;
+        }
+        span{
+            color: #00679e;
+            font-size: 16px;
+            line-height: 25px;
+            vertical-align: middle;
+        }
+        &:hover{
+            background-color: rgba(222,222,222,0.5)
+        }
+        &:active{
+            background-color: #007AC3;
+            span{
+                color: #fff;
+            }
+        }
+    }
     textarea{
         color: #000000;
         background-color: #ffffff;
@@ -60,6 +80,22 @@
         box-sizing: border-box;
     }
 
+    .attach-list{
+        position: relative;
+        .list-title{
+            .icon-plus{
+                line-height: 50px;
+                position: absolute;
+                left: 10px;
+                top: 0;
+
+            }
+        }
+        .upload-btn {
+            padding: 0;
+            background: transparent;
+        }
+    }
 }
 .expenses{
 

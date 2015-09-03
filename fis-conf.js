@@ -12,7 +12,7 @@
 
 /*
 npm install -g fis --registry=http://r.cnpmjs.org
-fis release --domains --dest normal*/
+fis release -w --domains --dest normal*/
 
 fis.config.merge({
     modules : {
