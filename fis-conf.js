@@ -1,16 +1,6 @@
-//fis.config.set('modules.postpackager', 'simple');
-
-//对零散资源进行合并，保证一个文件里只有一个script标签
-//fis.config.set('settings.postpackager.simple.autoCombine', true);
-
-//对加上了?__sprite参数的图片进行合并
-//fis.config.set('modules.spriter', 'csssprites');
-//fis.config.set('settings.spriter.csssprites.margin', 5);
-
-//强制合并后的script标签出现在文件里而不是一定要有body标签才出现
-//fis.config.set('settings.postpackager.simple.forceOutput', true);
-
 /*
+fis仅仅会复制文件到_output中并处理inline文件，不会做任何其他事情。
+less文件需要自己编译。
 npm install -g fis --registry=http://r.cnpmjs.org
 fis release -w --domains --dest normal*/
 
