@@ -1,6 +1,9 @@
 body {
 	background: #1FA3AF;
 }
+.container {
+	overflow:hidden;
+}
 .header-wrap {
 	background: #009CE3;
 	position: fixed;
@@ -143,12 +146,36 @@ body {
 		text-align: center;
 	}
 }
+.moving {
+	z-index: 10;
+}
+/*切换container*/
+.cnt-right{
+	position: absolute;
+	left: 320px;
+	top: 0px;
+	bottom: 0px;
+	right: 0;
+}
+.title-right {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	height: 43px;
+	line-height: 45px;
+	color: #666666;
+	background: #FFF;
+
+}
 .btm-right {
-	position: fixed;
-	bottom: 48px;
-	right: 10%;
+	position: absolute;
+	bottom: 0;
+	right: 20px;
 	height: 47px;
 	z-index: 1;
+	background: #3d4549;
 }
 .btm-link {
 	color: #FFF;
@@ -248,6 +275,87 @@ body {
 		left:45px;
 	}
 }
+/*自定义下拉框*/
+.selint {
+	position: relative;
+	z-index: 10;
+	background: #fff;
+}
+.selint .option {
+	position: absolute;
+	top: 27px;
+	left: 0;
+	width: 159px;
+	height: 130px;
+	overflow-y: scroll;
+	border: 1px solid #ddd;
+	background: #fff;
+	display: none
+}
+.selint .option a {
+	display: block;
+	padding: 5px 10px;
+	color: #666
+}
+.selint .option a:hover {
+	background: #66b6e3;
+	color: #fff
+}
+.selint .sopin {
+	position: absolute;
+	top: 38px;
+	left: -1px;
+	right:-1px;
+	background: #fff;
+	border: 1px solid #ddd;
+	z-index: 2;
+	max-height: 160px;
+	overflow-y: auto;
+}
+.selint .sopin li a {
+	display: block;
+	padding: 0 10px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	border-bottom: 1px solid #ddd;
+	color: #333
+}
+.selint .sopin li a:hover {
+	background: #f0f0f0;
+	text-decoration: none
+}
+.selint .sebn {
+	height: 38px;
+	line-height: 38px;
+	border: 1px solid #ddd;
+	padding: 0;
+	position: relative;
+	&:hover{
+		border:1px solid #0078C6;
+		.most{
+			background: #0078C6;
+			color: #FFF;
+		}
+	}
+}
+.selint .sebn .sipt {
+	font-size: 16px;
+	line-height: 38px;
+	height: 40px;
+	padding: 0 10px;
+	display: block;
+	cursor: pointer;
+}
+.selint .sebn .most {
+	width: 38px;
+	height: 40px;
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	text-align: center;
+}
+
 /*table*/
 table {
   background-color: #FFF;
