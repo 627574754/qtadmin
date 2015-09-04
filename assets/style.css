@@ -361,6 +361,14 @@ a {
   content: '\e824';
 }
 /* '' */
+.icon-check:before {
+  content: '\e825';
+}
+/* '' */
+.icon-minus:before {
+  content: '\e826';
+}
+/* '' */
 body {
   background: #1FA3AF;
 }
@@ -1465,6 +1473,18 @@ th {
     transform: scale(1.25) rotate(288deg);
   }
 }
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
 /*字体颜色*/
 .f000 {
   color: #000;
@@ -1616,6 +1636,78 @@ th {
 }
 .ui-dialog-pop .button:hover {
   background: #444d52;
+}
+/*ui-form*/
+.ui-checkbox {
+  background-color: #ffffff;
+  height: 1.125rem;
+  width: 1.125rem;
+  line-height: 1.125rem;
+  padding: 0;
+  text-align: center;
+  border: solid 0.125rem #c0c0c0;
+  border-top-left-radius: 0.125rem;
+  border-top-right-radius: 0.125rem;
+  border-bottom-right-radius: 0.125rem;
+  border-bottom-left-radius: 0.125rem;
+  -webkit-focus-ring-color: none;
+  cursor: pointer;
+}
+.ui-checkbox:hover {
+  border: solid 0.125rem #007cc0;
+}
+.ui-checkbox span {
+  color: #007cc0;
+  display: none;
+}
+.ui-checkbox span:before {
+  margin: 0;
+}
+.ui-checkbox.checked span {
+  display: inline;
+}
+.ui-btn-plus {
+  height: 2.500rem;
+  min-width: 2.500rem;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  border: 1px solid #bfbfbf;
+  border-radius: 0.125rem;
+  color: #333333;
+  text-shadow: 0 1px 0 #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.ui-btn-plus:hover {
+  background: #EFEDED;
+}
+.ui-btn-plus:active {
+  background: #007AC3;
+}
+.ui-btn-plus.disabled {
+  background: #F3F4F5;
+}
+.ui-btn-plus.disabled span {
+  color: #ADADAE;
+}
+.ui-btn-plus span {
+  color: #666666;
+  font-size: 1.475rem;
+  line-height: 2.675rem;
+  width: 2.375rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  max-height: 2.375rem;
+}
+.ui-btn-plus span:before {
+  line-height: 2.675rem;
+  margin: 0;
 }
 .container-list {
   margin: 55px auto;
@@ -2483,6 +2575,7 @@ th {
 .report-wrapper h4 {
   font-size: 18px;
   border-bottom: 1px solid #cdcdcd;
+  line-height: 50px;
 }
 .report-wrapper form {
   background: #fff;
@@ -2558,4 +2651,77 @@ th {
 .report-wrapper .attach-list .upload-btn {
   padding: 0;
   background: transparent;
+}
+.report-expenses h5 {
+  clear: both;
+  margin: 10px 0;
+}
+.report-expenses h5 em {
+  font-weight: normal;
+  float: right;
+  color: #666;
+  margin-right: 80px;
+}
+.report-expenses h5 span {
+  float: right;
+  margin-right: 6px;
+}
+.list-expenses .list-item {
+  border-bottom: 1px solid #e5e5e5;
+  height: 42px;
+  padding: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+.list-expenses .list-item:hover {
+  background: #f0f0f0;
+}
+.list-expenses .list-item .fr,
+.list-expenses .list-item .fl {
+  height: 42px;
+}
+.list-expenses .list-item em {
+  color: #666;
+}
+.list-expenses .list-item .item-summary p {
+  padding-bottom: 10px;
+}
+.list-expenses .list-item .item-summary span {
+  color: #666;
+}
+.list-expenses .list-item .item-money em {
+  margin-left: 6px;
+}
+.list-expenses .list-item .item-button {
+  margin-left: 20px;
+}
+.list-expenses .list-item .aths-icon-edit {
+  color: #666;
+}
+.list-expenses .list-item .icon-cancel {
+  color: #cc1919;
+}
+.list-expenses .details-item-add {
+  margin-top: 20px;
+  display: inline-block;
+}
+.add-expense-list li {
+  height: 53px;
+  cursor: pointer;
+}
+.add-expense-list li .ui-checkbox {
+  margin: 15px;
+}
+.add-expense-list li .list-title {
+  margin: 16px 0;
+  color: #666;
+}
+.add-expense-list li .ui-btn-plus {
+  margin: 5px 15px 0 0;
+}
+.add-expense-list li.active {
+  background: #e6f2f9;
+}
+.add-expense-list li:hover {
+  background: #d9ecf6;
 }

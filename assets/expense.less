@@ -14,6 +14,7 @@
     h4{
         font-size: 18px;
         border-bottom: 1px solid #cdcdcd;
+        line-height: 50px;
     }
     form{
         background: #fff;
@@ -97,6 +98,88 @@
         }
     }
 }
-.expenses{
 
+.report-expenses{
+    h5{
+        clear: both;
+        margin: 10px 0;
+        em{
+            font-weight: normal;
+            float: right;
+            color: #666;
+            margin-right: 80px;
+        }
+        span{
+            float: right;
+            margin-right: 6px;
+        }
+    }
+}
+.list-expenses{
+    .list-item{
+        border-bottom: 1px solid #e5e5e5;
+        height: 42px;
+        padding: 10px;
+        background: #fff;
+        cursor: pointer;
+        &:hover{
+            background: #f0f0f0;
+        }
+        .fr, .fl{
+            height: 42px;
+        }
+        em{
+            color: #666;
+        }
+        .item-summary{
+            p{
+                padding-bottom: 10px;
+            }
+            span{
+                color: #666;
+            }
+        }
+        .item-money{
+            em{
+                margin-left: 6px;
+            }
+        }
+        .item-button{
+            margin-left: 20px;
+        }
+        .aths-icon-edit{
+            color: #666;
+        }
+        .icon-cancel{
+            color: #cc1919;
+        }
+    }
+    .details-item-add{
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+}
+
+.add-expense-list{
+    li{
+        height: 53px;
+        cursor: pointer;
+        .ui-checkbox{
+            margin: 15px;
+        }
+        .list-title{
+            margin: 16px 0;
+            color: #666;
+        }
+        .ui-btn-plus{
+            margin: 5px 15px 0 0;
+        }
+        &.active{
+            background: #e6f2f9;
+        }
+        &:hover{
+            background: #d9ecf6;
+        }
+    }
 }

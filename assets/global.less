@@ -1210,6 +1210,19 @@ th {
 		transform: scale(1.25) rotate(288deg)
 	}
 }
+
+.clearfix {
+    *zoom:1}
+
+.clearfix:before,.clearfix:after {
+    display: table;
+    content: "";
+    line-height: 0
+}
+
+.clearfix:after {
+    clear: both
+}
 /*字体颜色*/
 .f000 {
 	color:#000;
@@ -1364,6 +1377,80 @@ th {
     }
 }
 
+/*ui-form*/
+.ui-checkbox{
+    background-color: #ffffff;
+    height: 1.125rem;
+    width: 1.125rem;
+    line-height: 1.125rem;
+    padding: 0;
+    text-align: center;
+    border: solid 0.125rem #c0c0c0;
+    border-top-left-radius: 0.125rem;
+    border-top-right-radius: 0.125rem;
+    border-bottom-right-radius: 0.125rem;
+    border-bottom-left-radius: 0.125rem;
+    -webkit-focus-ring-color: none;
+    cursor: pointer;
+    &:hover{
+        border: solid 0.125rem #007cc0;
+    }
+    span{
+        &:before{
+            margin: 0;
+        }
+        color: #007cc0;
+        display: none;
+    }
+    &.checked{
+        span{
+            display: inline;
+        }
+    }
+}
+.ui-btn-plus{
+    height: 2.500rem;
+    min-width: 2.500rem;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    border: 1px solid #bfbfbf;
+    border-radius: 0.125rem;
+    color: #333333;
+    text-shadow: 0 1px 0 #ffffff;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 0.875rem;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+        background: #EFEDED;
+    }
+    &:active{
+        background: #007AC3;
+    }
+    &.disabled{
+        background: #F3F4F5;
+        span{
+            color: #ADADAE;
+        }
+    }
+    span{
+        color: #666666;
+        font-size: 1.475rem;
+        line-height: 2.675rem;
+        width: 2.375rem;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
+        max-height: 2.375rem;
+        &:before{
+            line-height: 2.675rem;
+            margin: 0;
+        }
+    }
+}
 
 
 

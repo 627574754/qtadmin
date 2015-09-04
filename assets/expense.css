@@ -1,0 +1,167 @@
+.container-opp .opp-cnt-wrap div.report-content {
+  clear: both;
+  overflow: hidden;
+  padding: 20px 0;
+}
+.report-wrapper {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.report-wrapper:first-child {
+  padding-right: 0;
+}
+.report-wrapper h4 {
+  font-size: 18px;
+  border-bottom: 1px solid #cdcdcd;
+  line-height: 50px;
+}
+.report-wrapper form {
+  background: #fff;
+  padding: 1rem 0.75rem;
+}
+.report-wrapper .details-title {
+  color: #666;
+  padding-top: 0.625rem;
+  padding-bottom: 0.125rem;
+}
+.report-wrapper .details-content {
+  padding: 0.25rem 0;
+  height: 3rem;
+  line-height: 3rem;
+}
+.report-wrapper input.details-content {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #c0c0c0;
+  margin: 0;
+  font-size: 0.875rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: normal;
+  height: 2.5rem;
+  vertical-align: top;
+  padding: 0 0.75rem;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.report-wrapper .details-item-add:before {
+  vertical-align: middle;
+}
+.report-wrapper .details-item-add span {
+  color: #00679e;
+  font-size: 16px;
+  line-height: 25px;
+  vertical-align: middle;
+}
+.report-wrapper .details-item-add:hover {
+  background-color: rgba(222, 222, 222, 0.5);
+}
+.report-wrapper .details-item-add:active {
+  background-color: #007AC3;
+}
+.report-wrapper .details-item-add:active span {
+  color: #fff;
+}
+.report-wrapper textarea {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #c0c0c0;
+  margin: 0;
+  font-size: 0.875rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  padding: 0.75rem;
+  height: 2.5rem;
+  vertical-align: top;
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+}
+.report-wrapper .attach-list {
+  position: relative;
+}
+.report-wrapper .attach-list .list-title .icon-plus {
+  line-height: 50px;
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+.report-wrapper .attach-list .upload-btn {
+  padding: 0;
+  background: transparent;
+}
+.report-expenses h5 {
+  clear: both;
+  margin: 10px 0;
+}
+.report-expenses h5 em {
+  font-weight: normal;
+  float: right;
+  color: #666;
+  margin-right: 80px;
+}
+.report-expenses h5 span {
+  float: right;
+  margin-right: 6px;
+}
+.list-expenses .list-item {
+  border-bottom: 1px solid #e5e5e5;
+  height: 42px;
+  padding: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+.list-expenses .list-item:hover {
+  background: #f0f0f0;
+}
+.list-expenses .list-item .fr,
+.list-expenses .list-item .fl {
+  height: 42px;
+}
+.list-expenses .list-item em {
+  color: #666;
+}
+.list-expenses .list-item .item-summary p {
+  padding-bottom: 10px;
+}
+.list-expenses .list-item .item-summary span {
+  color: #666;
+}
+.list-expenses .list-item .item-money em {
+  margin-left: 6px;
+}
+.list-expenses .list-item .item-button {
+  margin-left: 20px;
+}
+.list-expenses .list-item .aths-icon-edit {
+  color: #666;
+}
+.list-expenses .list-item .icon-cancel {
+  color: #cc1919;
+}
+.list-expenses .details-item-add {
+  margin-top: 20px;
+  display: inline-block;
+}
+.add-expense-list li {
+  height: 53px;
+  cursor: pointer;
+}
+.add-expense-list li .ui-checkbox {
+  margin: 15px;
+}
+.add-expense-list li .list-title {
+  margin: 16px 0;
+  color: #666;
+}
+.add-expense-list li .ui-btn-plus {
+  margin: 5px 15px 0 0;
+}
+.add-expense-list li.active {
+  background: #e6f2f9;
+}
+.add-expense-list li:hover {
+  background: #d9ecf6;
+}
