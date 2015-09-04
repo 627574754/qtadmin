@@ -83,26 +83,40 @@ $.extend(gl, function(){
 			});
 		});
 	}
+	function initMoni() {
+		if ('div' in $.valHooks) {
+			return;
+		}
+
+		$.valHooks.div = {
+			get: function(elem) {
+				return $.data(elem, 'value');
+			},
+			set: function(elem, value) {
+				return $.data(elem, 'value', value);
+			}
+		};
+	}
 
 	function initSelect(){
-		var selEl = $('.selt-select');
+		initMoni();
 
-		selEl.each(function(index, item){
+		$('.selt-select').each(function(index, item) {
 			var selEl = $(item);
-			var popBtn = $('.stan', selEl),
+			var stan = $('.stan', selEl),
 				spon = $('.sPon', selEl);
 
 			var vkey = selEl.data('vkey') || 'value';
-			stan.click(function(e){
+			stan.click(function(e) {
 				e.preventDefault();
-				if($(this).hasClass('disabled')){
+				if ($(this).hasClass('disabled')) {
 					return;
 				}
 				var me = $(this);
 				me.closest('.selt').toggleClass('seltOn');
 				me.siblings('.sPon').toggleClass('none');
 			});
-			spon.on('click', 'li', function(e){
+			spon.on('click', 'li', function(e) {
 				e.preventDefault();
 				var me = $(this),
 					a = me.find('a');
@@ -116,8 +130,8 @@ $.extend(gl, function(){
 			});
 
 			// 隐藏下拉框
-			$('body').click(function(e){
-				if ( stan[0] && !($.contains(stan[0], e.target) || stan[0] == e.target) ) {
+			$('body').click(function(e) {
+				if (stan[0] && !($.contains(stan[0], e.target) || stan[0] === e.target)) {
 					spon.addClass('none').closest('.selt').removeClass('seltOn');
 				}
 			});
