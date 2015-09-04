@@ -203,7 +203,7 @@ $.extend(gl, function(){
      * ui-dialog-ft代表btn的容器，具有20px的padding和灰色背景。这个容器里的所有.button类都有右边距15px
      *
      *
-     * var dialog = new IOT.Dialog({
+     * var dialog = new gl.Dialog({
             title: '系统提示', //窗口标题的html，如果不设置则无标题
             content: '<div class="ui-dialog-bd"><p>欢迎！</p></div>',
             //窗口内容的html，必须是html格式不能是无格式纯文本，如果不设置则无内容
@@ -330,8 +330,8 @@ $.extend(gl, function(){
 
     Dialog.confirm = function(message, ok, cancel){
         var content = '<div class="ui-dialog-bd">' + message + '</div>';
-        content += '<div class="ui-dialog-ft"><button class="button j_ok" href="#">' + IOT.tr('确定') + '</button><button class="button j_cancel" href="#">' + IOT.tr('取消') + '</button></div>';
-        var confirmDialog = new IOT.Dialog({
+        content += '<div class="ui-dialog-ft"><a class="button j_ok" href="#">' + '确定' + '</a><a class="button j_cancel" href="#">' + '取消' + '</a></div>';
+        var confirmDialog = new gl.Dialog({
             className: 'ui-dialog-confirm',
             width: '450px',
             content: content,
