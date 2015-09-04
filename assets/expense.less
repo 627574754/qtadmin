@@ -161,6 +161,10 @@
 
 }
 
+.add-expense-type{
+    padding: 20px 0 30px;
+    text-align: center;
+}
 .add-expense-list{
     li{
         height: 53px;
@@ -177,9 +181,72 @@
         }
         &.active{
             background: #e6f2f9;
+            &:hover{
+                background: #d9ecf6;
+            }
         }
         &:hover{
-            background: #d9ecf6;
+            background: #f0f0f0;
+        }
+
+    }
+}
+
+.expense-submit-dialog{
+    padding: 0 15px;
+    h5{
+        margin: 28px 0 15px;
+    }
+    hr{
+        border-top: 1px solid #666;
+        border-bottom: 0 none;
+    }
+    .submit-dialog-destination, .submit-dialog-date{
+        color: #666;
+        margin: 10px 0;
+    }
+    .submit-dialog-reimbursement, .submit-dialog-expense{
+        font-weight: bold;
+        span, em{
+            float: right;
+        }
+        em{
+            color: #666;
+            margin-left: 10px;
+            font-weight: normal;
+            font-size: 12px;
+            padding-top: 3px;
+        }
+    }
+    .submit-dialog-reimbursement{
+        color: #000;
+        margin: 25px 0 15px;
+
+    }
+    .submit-dialog-expense{
+        margin: 0 0 25px;
+        color: #666;
+    }
+    .submit-dialog-rule{
+        padding: 45px 0;
+        cursor: pointer;
+        .ui-checkbox{
+            margin: 10px;
+        }
+        .rule-text{
+            width: 300px;
+            color: #666;
+        }
+    }
+}
+
+.expense-duplicate-dialog{
+    .form-group{
+        label{
+            text-align: right;
+        }
+        input{
+            width: 270px;
         }
     }
 }
