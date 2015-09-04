@@ -145,6 +145,10 @@
   margin-top: 20px;
   display: inline-block;
 }
+.add-expense-type {
+  padding: 20px 0 30px;
+  text-align: center;
+}
 .add-expense-list li {
   height: 53px;
   cursor: pointer;
@@ -162,6 +166,67 @@
 .add-expense-list li.active {
   background: #e6f2f9;
 }
-.add-expense-list li:hover {
+.add-expense-list li.active:hover {
   background: #d9ecf6;
+}
+.add-expense-list li:hover {
+  background: #f0f0f0;
+}
+.expense-submit-dialog {
+  padding: 0 15px;
+}
+.expense-submit-dialog h5 {
+  margin: 28px 0 15px;
+}
+.expense-submit-dialog hr {
+  border-top: 1px solid #666;
+  border-bottom: 0 none;
+}
+.expense-submit-dialog .submit-dialog-destination,
+.expense-submit-dialog .submit-dialog-date {
+  color: #666;
+  margin: 10px 0;
+}
+.expense-submit-dialog .submit-dialog-reimbursement,
+.expense-submit-dialog .submit-dialog-expense {
+  font-weight: bold;
+}
+.expense-submit-dialog .submit-dialog-reimbursement span,
+.expense-submit-dialog .submit-dialog-expense span,
+.expense-submit-dialog .submit-dialog-reimbursement em,
+.expense-submit-dialog .submit-dialog-expense em {
+  float: right;
+}
+.expense-submit-dialog .submit-dialog-reimbursement em,
+.expense-submit-dialog .submit-dialog-expense em {
+  color: #666;
+  margin-left: 10px;
+  font-weight: normal;
+  font-size: 12px;
+  padding-top: 3px;
+}
+.expense-submit-dialog .submit-dialog-reimbursement {
+  color: #000;
+  margin: 25px 0 15px;
+}
+.expense-submit-dialog .submit-dialog-expense {
+  margin: 0 0 25px;
+  color: #666;
+}
+.expense-submit-dialog .submit-dialog-rule {
+  padding: 45px 0;
+  cursor: pointer;
+}
+.expense-submit-dialog .submit-dialog-rule .ui-checkbox {
+  margin: 10px;
+}
+.expense-submit-dialog .submit-dialog-rule .rule-text {
+  width: 300px;
+  color: #666;
+}
+.expense-duplicate-dialog .form-group label {
+  text-align: right;
+}
+.expense-duplicate-dialog .form-group input {
+  width: 270px;
 }

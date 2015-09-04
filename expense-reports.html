@@ -241,12 +241,12 @@
                 </div>
             </div>
 
-            <div class="btm-right">
-                <a href="#" class="btm-link active">Save</a>
-                <a href="#" class="btm-link">Submit</a>
-                <a href="#" class="btm-link">Cancel</a>
-                <a href="#" class="btm-link">Duplicate</a>
-                <a href="#" class="btm-link">Duplicate</a>
+            <div class="btm-right j_expense_op">
+                <a href="#" class="btm-link active j_save">Save</a>
+                <a href="#" class="btm-link j_submit">Submit</a>
+                <a href="#" class="btm-link j_cancel">Cancel</a>
+                <a href="#" class="btm-link j_duplicate">Duplicate</a>
+                <a href="#" class="btm-link j_remove">Remove</a>
                 <a href="#" class="btm-link icon-forward"></a>
             </div>
         </div>
@@ -259,6 +259,12 @@
     <link rel="import" href="_footer.html?__inline">
 
     <div id="addExpenseDlg" class="dialog none">
+        <div class="add-expense-type">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-default disabled">Assign</button>
+                <button type="button" class="btn btn-default active">New</button>
+            </div>
+        </div>
         <ul class="add-expense-list">
             <li class="clearfix active">
                 <div class="fl ui-checkbox checked"><span class="icon-check"></span></div>
@@ -280,8 +286,53 @@
                 <a class="fr ui-btn-plus"><span class="icon-plus"></span> </a>
                 <a class="fr ui-btn-plus disabled"><span class="icon-minus"></span> </a>
             </li>
-
         </ul>
+        <div class="ui-dialog-ft"><a class="button j_ok">确定</a><a class="button j_dlg_close">关闭</a></div>
+    </div>
+
+    <div id="submitDlg" class="dialog none">
+        <div class="expense-submit-dialog">
+            <h5>去美国洛杉矶出差面试</h5>
+            <p class="submit-dialog-destination">美国</p>
+            <p class="submit-dialog-date">September 3, 2012 - September 3, 2012</p>
+            <hr>
+            <p class="submit-dialog-reimbursement">
+                Total Reimbursement
+                <em>USD</em>
+                <span>472.00</span>
+            </p>
+            <p class="submit-dialog-expense">
+                Total Expenses
+                <em>USD</em>
+                <span>472.00</span>
+            </p>
+            <hr>
+            <div class="submit-dialog-rule clearfix j_rule">
+                <div class="fl ui-checkbox"><span class="icon-check"></span></div>
+                <p class="fl rule-text">
+                    I have read, understood, and complied with the company's policy. I declare amounts and supporting details are complete and accurate to the best of my knowledge.
+                </p>
+            </div>
+        </div>
+        <div class="ui-dialog-ft"><a class="button disabled j_ok">确定</a><a class="button j_dlg_close">取消</a></div>
+    </div>
+
+    <div id="duplicateDlg" class="dialog none">
+        <div class="expense-duplicate-dialog">
+            <form class="form-horizontal" method="post">
+                <div class="form-group">
+                    <label class="label-required" for="date">日期：</label>
+                    <input type="text" name="name" id="date" required="">
+                </div>
+
+                <div class="form-group">
+                    <label class="label-required" for="purpose">目的：</label>
+                    <input type="text" name="name" id="purpose" required="">
+                </div>
+
+            </form>
+        </div>
+        <div class="ui-dialog-ft"><a class="button j_ok">确定</a><a class="button j_dlg_close">取消</a></div>
     </div>
     <script src="src/lib/jquery/jquery,qw.core.js"></script>
     <script src="src/lib/jquery/jquery-form.js"></script>

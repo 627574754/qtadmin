@@ -342,10 +342,16 @@ $.extend(gl, function(){
         }
     });
 
-    Dialog.confirm = function(message, ok, cancel){
+    Dialog.confirm = function(message, title, ok, cancel){
+        if(typeof title == 'function'){
+            cancel = ok;
+            ok = title;
+            title = null;
+        }
         var content = '<div class="ui-dialog-bd">' + message + '</div>';
         content += '<div class="ui-dialog-ft"><a class="button j_ok" href="#">' + '确定' + '</a><a class="button j_cancel" href="#">' + '取消' + '</a></div>';
         var confirmDialog = new gl.Dialog({
+            title: title,
             className: 'ui-dialog-confirm',
             width: '450px',
             content: content,
@@ -365,6 +371,70 @@ $.extend(gl, function(){
         });
         confirmDialog.open();
     };
+
+    Dialog.error = function(message, title, ok, cancel){
+        if(typeof title == 'function'){
+            cancel = ok;
+            ok = title;
+            title = null;
+        }
+        title = title || '错误';
+        var content = '<div class="ui-dialog-bd">' + message + '</div>';
+        content += '<div class="ui-dialog-ft"><a class="button j_ok" href="#">' + '确定' + '</a>' + (cancel ? '<a class="button j_cancel" href="#">' + '取消' + '</a>' : '') + '</div>';
+        var confirmDialog = new gl.Dialog({
+            title: '<span class="icon-attention-alt"></span>&nbsp;&nbsp;' + title,
+            className: 'ui-dialog-error',
+            width: '450px',
+            content: content,
+            showFooter: false,
+            cache: false,
+            showClose: false
+        });
+        confirmDialog.$root.on('click', '.button', function(e){
+            e.preventDefault();
+            var $target = $(this);
+            if($target.hasClass('j_ok')){
+                ok && ok.call(this);
+            }else{
+                cancel && cancel.call(this);
+            }
+            confirmDialog.close();
+        });
+        confirmDialog.open();
+    };
+
+    Dialog.wraning = function(message, title, ok, cancel){
+        if(typeof title == 'function'){
+            cancel = ok;
+            ok = title;
+            title = null;
+        }
+        title = title || '警告';
+        var content = '<div class="ui-dialog-bd">' + message + '</div>';
+        content += '<div class="ui-dialog-ft"><a class="button j_ok" href="#">' + '确定' + '</a>' + (cancel ? '<a class="button j_cancel" href="#">' + '取消' + '</a>' : '') + '</div>';
+        var confirmDialog = new gl.Dialog({
+            title: '<span class="icon-attention"></span>&nbsp;&nbsp;' + title,
+            className: 'ui-dialog-warning',
+            width: '450px',
+            content: content,
+            showFooter: false,
+            cache: false,
+            showClose: false
+        });
+        confirmDialog.$root.on('click', '.button', function(e){
+            e.preventDefault();
+            var $target = $(this);
+            if($target.hasClass('j_ok')){
+                ok && ok.call(this);
+            }else{
+                cancel && cancel.call(this);
+            }
+            confirmDialog.close();
+        });
+        confirmDialog.open();
+    };
+
+
 
     gl.Dialog = Dialog;
 })();
