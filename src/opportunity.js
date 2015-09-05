@@ -1,8 +1,9 @@
 (function(){
 	var gl = window.gl;
 
-	var addDlg;
+	var addDlg, areaDlg, parterDlg, parterEditDlg;
 	var cancelDlg;
+	var iptDlgs = {};
 
 	//tab切换
 	function tabSwitch() {
@@ -14,6 +15,14 @@
 			cnts.addClass('none').eq(index).removeClass('none');
 			$(this).addClass('cur');
 		});
+		//编辑销售区域
+		function editArea(){
+			var editBtn = $('#editArea');
+			editBtn.on('click', function(){
+				areaDlg.open();
+			});
+		}
+		editArea();
 	}
 	//上传文件
 	function fileUpload() {
@@ -52,7 +61,7 @@
 			var icon = icon || 'animate-spin icon-spin3 fblue';
 			var time = time || 'Uploading';
 			var container = $('#attchWrap .list-title');
-			var tmp = '<div class="aths-item-wrap" id="'+id+'"><div class="lt-l f30 '+icon+'"></div><div class="aths-item"><a href="#" class="fblue">'+name+'</a><p>'+time+'</p></div><div class="lt-r"><i class="aths-icon-edit icon-pencil"></i><i class="aths-icon-del icon-cancel"></i></div></div>';
+			var tmp = '<div class="aths-item-wrap" id="'+id+'"><div class="lt-l f30 '+icon+'"></div><div class="aths-item"><a href="#" class="fblue">'+name+'</a><p>'+time+'</p></div><div class="lt-r"><i class="aths-icon-edit icon-pencil attchEdit"></i><i class="aths-icon-del icon-cancel attchDel"></i></div></div>';
 			$(tmp).insertAfter(container);
 		}
 	}
@@ -70,6 +79,22 @@
 		txt.toggleClass('none');
 		$(this).toggleClass('icon-cog-outline');
 	});
+	//attachments 删除
+	$('#attchWrap').on('click','.attchDel',function(){
+		var me = $(this);
+		var item = $(this).parents('.aths-item-wrap');
+		new gl.Dialog.confirm('确定删除选中数据?','删除提示',function(){
+			item.remove();
+		});
+	});
+	//选择参与人
+	$('#addParter').on('click', function() {
+		parterDlg.open();
+	});
+	//参与人列表编辑
+	$('#parterWrap').on('click', '.parterEdit', function() {
+		parterEditDlg.open();
+	});
 	//transaction 列表加载
 	function loadTstTable() {
 		var tbody = $('#tstWrap tbody');
@@ -80,7 +105,6 @@
 		var cn = 10;
 		var steep = 10;
 		//初始化展示表格，默认展示10条
-		console.log(tn,curNum,totolNum)
 		tbody.find('tr:gt('+cn+')').addClass('none');
 		curNum.text(cn);
 		totolNum.text(tn);
@@ -121,12 +145,12 @@
 	function pageSwitch() {
 		var pages = $('.cntPage');
 		//添加页面切换
-		var btmAdd = $('#btmAdd');
+		var lbtns = $('.btm-left .i-btm');
 		$('.addOpp').on('click', function() {
 			var i = 1; //添加页面
 			addDlg.close();
 			var curPage = pages.eq(i);
-			btmAdd.addClass('btn-disabled');
+			lbtns.addClass('btn-disabled');
 			setTimeout(function(){
 				pages.not(curPage).css('left','200%');
 				curPage.removeClass('moving');
@@ -136,19 +160,17 @@
 		});
 		//返回首页
 		var btnCancel = $('.btnCancel');
-		var backBtn = $('.backBtn');
 		btnCancel.on('click', function() {
-			cancelDlg.open();
-		});
-		backBtn.on('click', function() {
-			var curPage = pages.eq(0);  //首页
-			btmAdd.removeClass('btn-disabled');
-			setTimeout(function(){
-				pages.not(curPage).css('left','200%');
-				curPage.removeClass('moving');
-			},300);
-			curPage.addClass('moving');
-			curPage.animate({left: '320px'}, 300);
+			new gl.Dialog.confirm('放弃编辑?','提示',function(){
+				var curPage = pages.eq(0);  //首页
+				lbtns.removeClass('btn-disabled');
+				setTimeout(function(){
+					pages.not(curPage).css('left','200%');
+					curPage.removeClass('moving');
+				},300);
+				curPage.addClass('moving');
+				curPage.animate({left: '320px'}, 300);
+			});
 		});
 	}
 	//初始化dialog
@@ -166,19 +188,74 @@
 			cache: true, //是否缓存。若为false则close()的时候会remove掉对话框对应的dom元素
 			width: '40%' //窗口宽度，如不传递默认为40%
 		});
-		cancelDlg = new gl.Dialog({
-			title: '提示', //窗口标题的html，如果不设置则无标题
-			content: '<div class="ui-dialog-bd"><p>放弃编辑</p></div>',
-			//窗口内容的html，必须是html格式不能是无格式纯文本，如果不设置则无内容
-			beforeClose: null, //调用close方法时执行的callback，如果此callback返回false则会阻止窗口的关闭
-			showClose: false,
-			showFooter: true,
-			className: '', //窗口最外层容器的类名
+		//编辑销售区域浮层
+		var areaDlgHtml = $('#areaDlg').html();
+		areaDlg = new gl.Dialog({
+			title: '选择销售区域', 
+			content: areaDlgHtml,
 			cache: true, //是否缓存。若为false则close()的时候会remove掉对话框对应的dom元素
 			width: '40%' //窗口宽度，如不传递默认为40%
 		});
+		//添加参与人浮层
+		var parterDlgHtml = $('#parterDlg').html();
+		parterDlg = new gl.Dialog({
+			title: '选择参与人', 
+			content: parterDlgHtml
+		});
+		//编辑参与人浮层
+		var parterEditDlgHtml = $('#parterEditDlg').html();
+		parterEditDlg = new gl.Dialog({
+			title: '选择参与人', 
+			content: parterEditDlgHtml
+		});
+	}
+	//初始化输入框组
+	function initIptGroup() {
+		var iptGroups = $('.iptGroup');
+		iptGroups.on('click', function(){
+			var name = $(this).data('name');
+			iptDlgs[name].open();
+		});
+		for (var i = iptGroups.length - 1; i >= 0; i--) {
+			var el = $(iptGroups[i]);
+			var name = el.data('name');
+			var dlg = $('#' + name + 'Dlg');
+			var title = el.data('title');
+			var tmp = dlg.html();
+			iptDlgs[name] = new gl.Dialog({
+				title: title, 
+				content: tmp,
+				width: '40%' //窗口宽度，如不传递默认为40%
+			});
+			var cnt = $('.ui-dialog-pop .'+name +'Content');
+			$('.items', cnt).on('click', function(){
+				var n = $(this).parents('.dl-content').data('name');
+				var ipt = $('input[name="'+n+'"]');
+				var val = $(this).data('value');
+				iptDlgs[n].close();
+				ipt.val(val);
+			});
+		};
 	}
 	
+	function initTimeSelect() {
+		var stEl = $('input[name="startTime"]');
+		var etEl = $('input[name="endTime"]');
+		// 绑定时间选择器
+		stEl.datepicker({
+			timeFormat: 'yy-mm-dd',
+			onSelect: function(dateText, inst) {
+				etEl.datepicker('option', 'minDate', dateText);
+			}
+		});
+
+		etEl.datepicker({
+			timeFormat: 'yy-mm-dd',
+			onSelect: function(dateText, inst) {
+				stEl.datepicker('option', 'maxDate', dateText);
+			}
+		});
+	}
 	initDialog();
 	//初始化tab切换
 	tabSwitch();
@@ -190,6 +267,10 @@
 	initHandle();
 	//页面切换
 	pageSwitch();
+	//初始化input框
+	initIptGroup();
+	initTimeSelect();
+
 
 	var dialog = new gl.Dialog({
 		title: '系统提示', //窗口标题的html，如果不设置则无标题

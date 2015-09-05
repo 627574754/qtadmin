@@ -353,7 +353,7 @@ $.extend(gl, function(){
         var confirmDialog = new gl.Dialog({
             title: title,
             className: 'ui-dialog-confirm',
-            width: '450px',
+            width: '300px',
             content: content,
             showFooter: false,
             cache: false,

@@ -242,6 +242,9 @@ body {
 			background: #555;
 		}
 	}
+	.btn-disabled {
+		color: #ccc;
+	}
 	.h-list-wrap {
 		width: 200px;
 		position: absolute;
@@ -277,7 +280,7 @@ body {
 /*自定义下拉框*/
 .selint {
 	position: relative;
-	z-index: 10;
+	z-index: 1;
 	background: #fff;
 }
 .selint .option {
@@ -409,6 +412,12 @@ th {
 	.list-item {
 		border-bottom: 1px solid #E5E5E5;
 		padding: 10px 13px;
+		.item-txt {
+			padding:10px 0;
+		}
+		&:hover {
+			background: #eee;
+		}
 	}
 }
 
@@ -464,6 +473,13 @@ th {
   .table {
 	background-color: #FFF;
   }
+}
+.table-hover {
+	tr {
+		&:hover {
+			background: #eee;
+		}
+	}
 }
 
 

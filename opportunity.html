@@ -3,7 +3,9 @@
 <meta charset="utf-8" />
 <head>
     <link rel="import" href="_head.html?__inline">
-    <title>Opportunity</title>
+    <link rel="stylesheet" type="text/css" href="assets/jquery/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="assets/jquery/jquery-ui-timepicker-addon.css">
+    <title>opportunity</title>
 </head>
 <body>
 <link rel="import" href="_header.html?__inline">
@@ -11,7 +13,7 @@
 	<div class="page-title">
 		<div class="tl-left">
 			<i class="i-back icon-forward icon-todo"></i>
-			Opportunities(5)
+			列表(5)
 		</div>
 		<!-- <div class="tl-right">opportunity</div> -->
 	</div>
@@ -38,13 +40,13 @@
 		<div class="list">
 			<div class="list-item">
 				<p class="item-txt1">
-					Meeting with Customer Gargan Group
+					会见客户
 					<span class="des">
 						<span class="txt">1M</span><span class="txt f12">USD</span>
 					</span>
 				</p>
 				<p class="item-txt2">
-					ADCOM COMPUTER Seatle WA9811
+					阿尔法处理中心
 				</p>
 				<p class="item-txt2">
 					closing Date :Jan 31,2015 <span class="txt f333">in process</span>
@@ -52,13 +54,13 @@
 			</div>
 			<div class="list-item">
 				<p class="item-txt1">
-					Meeting with Customer Gargan Group
+					会见客户
 					<span class="des">
 						<span class="txt">1M</span><span class="txt f12">USD</span>
 					</span>
 				</p>
 				<p class="item-txt2">
-					ADCOM COMPUTER Seatle WA9811
+					阿尔法处理中心
 				</p>
 				<p class="item-txt2">
 					closing Date :Jan 31,2015 <span class="txt f333">in process</span>
@@ -66,13 +68,13 @@
 			</div>
 			<div class="list-item">
 				<p class="item-txt1">
-					Meeting with Customer Gargan Group
+					会见客户
 					<span class="des">
 						<span class="txt">1M</span><span class="txt f12">USD</span>
 					</span>
 				</p>
 				<p class="item-txt2">
-					ADCOM COMPUTER Seatle WA9811
+					阿尔法处理中心
 				</p>
 				<p class="item-txt2">
 					closing Date :Jan 31,2015 <span class="txt f333">in process</span>
@@ -80,13 +82,13 @@
 			</div>
 			<div class="list-item">
 				<p class="item-txt1">
-					Meeting with Customer Gargan Group
+					会见客户
 					<span class="des">
 						<span class="txt">1M</span><span class="txt f12">USD</span>
 					</span>
 				</p>
 				<p class="item-txt2">
-					ADCOM COMPUTER Seatle WA9811
+					阿尔法处理中心
 				</p>
 				<p class="item-txt2">
 					closing Date :Jan 31,2015 <span class="txt f333">in process</span>
@@ -94,13 +96,13 @@
 			</div>
 			<div class="list-item">
 				<p class="item-txt1">
-					Meeting with Customer Gargan Group
+					会见客户
 					<span class="des">
 						<span class="txt">1M</span><span class="txt f12">USD</span>
 					</span>
 				</p>
 				<p class="item-txt2">
-					ADCOM COMPUTER Seatle WA9811
+					阿尔法处理中心
 				</p>
 				<p class="item-txt2">
 					closing Date :Jan 31,2015 <span class="txt f333">in process</span>
@@ -108,13 +110,13 @@
 			</div>
 			<div class="list-item">
 				<p class="item-txt1">
-					Meeting with Customer Gargan Group
+					会见客户
 					<span class="des">
 						<span class="txt">1M</span><span class="txt f12">USD</span>
 					</span>
 				</p>
 				<p class="item-txt2">
-					ADCOM COMPUTER Seatle WA9811
+					阿尔法处理中心
 				</p>
 				<p class="item-txt2">
 					closing Date :Jan 31,2015 <span class="txt f333">in process</span>
@@ -122,7 +124,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="cnt-right cntPage">
+	<div class="cnt-right cntPage" style="left:200%;">
 		<div class="title-right">opportunity</div>
 		<div class="btm-right">
 			<a href="#" class="btm-link active">Edit</a>
@@ -132,7 +134,7 @@
 		</div>
 		<div class="opp-cnt-wrap">
 			<div class="cnt-nav">
-				<div class="nav-title"><i class="i-nav icon-user"></i>Meeting With Customer Gargans Group
+				<div class="nav-title"><i class="i-nav icon-user"></i>会见客户
 					<div class="nav-right">
 						<span class="txt">10000000</span>
 						<span class="f12">Exp.sales volume in USD</span>
@@ -198,7 +200,7 @@
 			</div>
 			<!--Sale Area-->
 			<div class="cnt-content tabCnt none">
-				<div class="cnt-title">Sales Area<i class="i-edit icon-pencil"></i></div>
+				<div class="cnt-title">Sales Area<i class="i-edit icon-pencil" id="editArea"></i></div>
 				<div class="group">
 					<label class="label">Type：</label>
 					<span class="cnt-txt">Oppornity Including Sale Methodology</span>
@@ -278,7 +280,7 @@
 					</div>
 					<div class="lt-r">
 						<i class="aths-icon-edit icon-pencil attchEdit"></i>
-						<i class="aths-icon-del icon-cancel"></i>
+						<i class="aths-icon-del icon-cancel attchDel"></i>
 					</div>
 				</div>
 				<div class="aths-item-wrap">
@@ -292,7 +294,7 @@
 					</div>
 					<div class="lt-r">
 						<i class="aths-icon-edit icon-pencil attchEdit"></i>
-						<i class="aths-icon-del icon-cancel"></i>
+						<i class="aths-icon-del icon-cancel attchDel"></i>
 					</div>
 				</div>
 				<div class="aths-item-wrap">
@@ -306,7 +308,7 @@
 					</div>
 					<div class="lt-r">
 						<i class="aths-icon-edit icon-pencil attchEdit"></i>
-						<i class="aths-icon-del icon-cancel"></i>
+						<i class="aths-icon-del icon-cancel attchDel"></i>
 					</div>
 				</div>
 				<div class="aths-item-wrap">
@@ -320,7 +322,7 @@
 					</div>
 					<div class="lt-r">
 						<i class="aths-icon-edit icon-pencil attchEdit"></i>
-						<i class="aths-icon-del icon-cancel"></i>
+						<i class="aths-icon-del icon-cancel attchDel"></i>
 					</div>
 				</div>
 				<div class="aths-item-wrap">
@@ -334,7 +336,7 @@
 					</div>
 					<div class="lt-r">
 						<i class="aths-icon-edit icon-pencil attchEdit"></i>
-						<i class="aths-icon-del icon-cancel"></i>
+						<i class="aths-icon-del icon-cancel attchDel"></i>
 					</div>
 				</div>
 				<div class="aths-item-wrap">
@@ -348,15 +350,15 @@
 					</div>
 					<div class="lt-r">
 						<i class="aths-icon-edit icon-pencil attchEdit"></i>
-						<i class="aths-icon-del icon-cancel"></i>
+						<i class="aths-icon-del icon-cancel attchDel"></i>
 					</div>
 				</div>
 			</div>
 			<!--participants-->
-			<div class="cnt-content tabCnt none">
+			<div class="cnt-content tabCnt none" id="parterWrap">
 				<div class="list-title">
-					<div class="lt-l">participants(5)</div>
-					<div class="lt-r f25 icon-plus"></div>
+					<div class="lt-l">合作人(5)</div>
+					<div class="lt-r f25 icon-plus" id="addParter"></div>
 				</div>
 				<div class="par-list">
 					<div class="par-head icon-user"></div>
@@ -366,7 +368,7 @@
 						<p><i class="icon-todo icon-volume-up"></i>+14845521604</p>
 					</div>
 					<div class="par-r">
-						<i class="mr40 icon-pencil"></i>
+						<i class="mr40 icon-pencil parterEdit"></i>
 						<i class="icon-cancel"></i>
 					</div>
 				</div>
@@ -378,7 +380,7 @@
 						<p><i class="icon-todo icon-volume-up"></i>+14845521604</p>
 					</div>
 					<div class="par-r">
-						<i class="mr40 icon-pencil"></i>
+						<i class="mr40 icon-pencil parterEdit"></i>
 						<i class="icon-cancel"></i>
 					</div>
 				</div>
@@ -390,7 +392,7 @@
 						<p><i class="icon-todo icon-volume-up"></i>+14845521604</p>
 					</div>
 					<div class="par-r">
-						<i class="mr40 icon-pencil"></i>
+						<i class="mr40 icon-pencil parterEdit"></i>
 						<i class="icon-cancel"></i>
 					</div>
 				</div>
@@ -402,7 +404,7 @@
 						<p><i class="icon-todo icon-volume-up"></i>+14845521604</p>
 					</div>
 					<div class="par-r">
-						<i class="mr40 icon-pencil"></i>
+						<i class="mr40 icon-pencil parterEdit"></i>
 						<i class="icon-cancel"></i>
 					</div>
 				</div>
@@ -414,7 +416,7 @@
 						<p><i class="icon-todo icon-volume-up"></i>+14845521604</p>
 					</div>
 					<div class="par-r">
-						<i class="mr40 icon-pencil"></i>
+						<i class="mr40 icon-pencil parterEdit"></i>
 						<i class="icon-cancel"></i>
 					</div>
 				</div>
@@ -426,7 +428,7 @@
 						<p><i class="icon-todo icon-volume-up"></i>+14845521604</p>
 					</div>
 					<div class="par-r">
-						<i class="mr40 icon-pencil"></i>
+						<i class="mr40 icon-pencil parterEdit"></i>
 						<i class="icon-cancel"></i>
 					</div>
 				</div>
@@ -601,12 +603,11 @@
 		</div>
 	</div>
 	<!--添加Opportunity OPPT表单-->
-	<div class="cnt-right cntPage" style="left:200%;">
+	<div class="cnt-right cntPage">
 		<div class="title-right">opportunity</div>
 		<div class="btm-right">
-			<a href="#" class="btm-link active">Edit</a>
-			<a href="#" class="btm-link">Follow Up</a>
-			<a href="#" class="btm-link">message</a>
+			<a href="#" class="btm-link active">Save</a>
+			<a href="#" class="btm-link btnCancel">Cancel</a>
 			<a href="#" class="btm-link icon-forward">privacy</a>
 		</div>
 		<div class="opp-cnt-wrap" >		
@@ -624,46 +625,58 @@
 					<div class="form-group">
 						<label class="f-label">账号*:</label>
 						<div class="form-item">
-							<div class="input-group"><input type="text" name="" /><i class="input-link  icon-attach-1"></i></div>
+							<div class="input-group"><input type="text" name="account" /><i class="input-link icon-attach-1 iptGroup" data-name="account" data-title="选择账号"></i></div>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="f-label">联系电话:</label>
 						<div class="form-item">
-							<div class="input-group"><input type="text" name="" /><i class="input-link  icon-attach-1"></i></div>
+							<div class="input-group"><input type="text" name="contact" /><i class="input-link  icon-attach-1 iptGroup" data-name="contact" data-title="选择联系人"></i></div>
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="f-label">负责人:</label>
+						<label class="f-label">员工义务:</label>
 						<div class="form-item">
-							<div class="input-group"><input type="text" name="" /><i class="input-link  icon-attach-1"></i></div>
+							<div class="input-group"><input type="text" name="employees" /><i class="input-link  icon-attach-1 iptGroup" data-name="employees" data-title="员工"></i></div>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="f-label">销售量:</label>
 						<div class="form-item">
 							<div class="input-control1"><input type="text" name=""  /></div>
-							<div class="input-group input-control2 fr"><input type="text" name="" /><i class="input-link  icon-attach-1"></i></div>
+							<div class="input-group input-control2 fr"><input type="text" name="currency" /><i class="input-link  icon-attach-1 iptGroup" data-name="currency" data-title="选择货币"></i></div>
 						</div>
 					</div>
 				</div>
 				<div class="form-panel">
 					<div class="form-group">
-						<label class="f-label">姓名*:</label>
+						<label class="f-label">开始时间:</label>
+						<div class="form-item">
+							<div class="input-control"><input type="text" name="startTime" placeholder="开始时间" value="" /></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="f-label">结束时间:</label>
+						<div class="form-item">
+							<div class="input-control"><input type="text" name="endTime" placeholder="结束时间" value="" /></div></div>
+					</div>
+				</div>
+				<div class="form-panel">
+					<div class="form-group">
+						<label class="f-label">状态:</label>
 						<div class="form-item">
 							<div class="selint clearfix">
 								<div class="sebn selt-select" data-vkey="id">
 									<div class="stan">
 										<span class="most icon-todo icon-plus"></span>
-										<span class="sipt stn">请选择</span>
+										<span class="sipt stn">新建</span>
 									</div>
 									<div class="sopin sPon none">
 										<ul>
-											<li><a href="#" data-id="1">高级管理员</a></li>
-											<li><a href="#" data-id="2">高级操作员</a></li>
-											<li><a href="#" data-id="3">普通操作员</a></li>
-											<li><a href="#" data-id="4">APP普通用户</a></li>
-											<li><a href="#" data-id="5">APP游客</a></li>
+											<li><a href="#" data-id="1">新建</a></li>
+											<li><a href="#" data-id="2">处理中</a></li>
+											<li><a href="#" data-id="3">已完成</a></li>
+											<li><a href="#" data-id="4">失败</a></li>
 										</ul>
 									</div>
 								</div>
@@ -671,6 +684,111 @@
 						</div>
 					</div>
 				</div>
+				<div class="form-panel">
+					<div class="form-group">
+						<label class="f-label">销售阶段:</label>
+						<div class="form-item">
+							<div class="selint clearfix">
+								<div class="sebn selt-select" data-vkey="id">
+									<div class="stan">
+										<span class="most icon-todo icon-plus"></span>
+										<span class="sipt stn">信息交换</span>
+									</div>
+									<div class="sopin sPon none">
+										<ul>
+											<li><a href="#" data-id="1">信息交换</a></li>
+											<li><a href="#" data-id="2">讨论</a></li>
+											<li><a href="#" data-id="3">决策</a></li>
+											<li><a href="#" data-id="4">最后阶段</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-panel">
+					<div class="form-group">
+						<label class="f-label">成功几率(%):</label>
+						<div class="form-item">
+							<div class="input-control"><input type="text" name="" placeholder="" value="0" /></div>
+						</div>
+					</div>
+				</div>
+				<div class="form-panel">
+					<div class="form-group">
+						<label class="f-label">优先级:</label>
+						<div class="form-item">
+							<div class="selint clearfix">
+								<div class="sebn selt-select" data-vkey="id">
+									<div class="stan">
+										<span class="most icon-todo icon-plus"></span>
+										<span class="sipt stn">高</span>
+									</div>
+									<div class="sopin sPon none">
+										<ul>
+											<li><a href="#" data-id="1">紧急</a></li>
+											<li><a href="#" data-id="2">高</a></li>
+											<li><a href="#" data-id="3">中</a></li>
+											<li><a href="#" data-id="4">低</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-panel">
+					<div class="form-group">
+						<label class="f-label">预测相关性:</label>
+						<div class="form-item">
+							<i class="f-switch icon-todo icon-attach-1"></i>
+						</div>
+					</div>
+				</div>
+				<div class="form-title">销售区域</div>
+				<div class="form-panel">
+					<div class="form-group">
+						<label class="f-label">销售组织:</label>
+						<div class="form-item">
+							<div class="input-group"><input type="text" name="organ" /><i class="input-link  icon-attach-1 iptGroup" data-name="organ" data-title="选择组织"></i></div>
+						</div>
+					</div>
+				</div>
+				<div class="form-title">产量</div>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>产品</th>
+							<th>质量</th>
+							<th>净值</th>
+							<th>总价值</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="4">
+								<p class="f333">没有数据</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="form-title">合作人列表</div>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>合作人</th>
+							<th>功能</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="4">
+								<p class="f333">没有数据</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
@@ -694,11 +812,257 @@
 		</div>
 	</div>
 </div>
+<!--销售区域-->
+<div id="areaDlg" class="dialog none">
+	<div class="dl-content">
+		<div class="dl-search">
+			<input class="search-ipt" placeholder="Search">
+			<i class="dls-icon icon-search"></i>
+		</div>
+		<div class="dl-list-wrap">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>销售组织</th>
+						<th>分销渠道</th>
+						<th>部门</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<p class="f333">组织1</p>
+						</td>
+						<td>
+							<p class="f333">渠道1</p>
+						</td>
+						<td>
+							<p class="f333">部门1</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="f333">组织2</p>
+						</td>
+						<td>
+							<p class="f333">渠道2</p>
+						</td>
+						<td>
+							<p class="f333">部门2</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<!--添加参与人-->
+<div id="parterDlg" class="dialog none">
+	<div class="dl-content">
+		<div class="dl-list-wrap">
+			<div class="list-item ">
+				<p class="item-txt">参与人1</p>
+			</div>
+			<div class="list-item">
+				<p class="item-txt">参与人2</p>
+			</div>
+			<div class="list-item">
+				<p class="item-txt">参与人3</p>
+			</div>
+			<div class="list-item">
+				<p class="item-txt">参与人4</p>
+			</div>
+			<div class="list-item">
+				<p class="item-txt">参与人5</p>
+			</div>
+			<div class="list-item">
+				<p class="item-txt">参与人6</p>
+			</div>
+			<div class="list-item">
+				<p class="item-txt">参与人7</p>
+			</div>
+			<div class="list-item">
+				<p class="item-txt">参与人8</p>
+			</div>
+			<div class="list-item">
+				<p class="item-txt">参与人9</p>
+			</div>
+			<div class="list-item">
+				<p class="item-txt">参与人10</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--编辑参与人浮层-->
+<div id="parterEditDlg" class="dialog none">
+	<div class="dl-content">
+		<div class="dl-list-wrap">
+			<div class="list-item ">
+				<p class="item-txt">参与人1</p>
+			</div>
+			<div class="list-item">
+				<p class="item-txt">参与人2</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--账号选择浮层-->
+<div id="accountDlg" class="dialog none">
+	<div class="dl-content accountContent" data-name="account">
+		<div class="dl-search">
+			<input class="search-ipt" placeholder="Search">
+			<i class="dls-icon icon-search"></i>
+		</div>
+		<div class="dl-list-wrap">
+			<div class="list-item  items" data-value="4019">
+				<p class="item-txt">4019</p>
+			</div>
+			<div class="list-item items" data-value="1093">
+				<p class="item-txt">1093</p>
+			</div>
+			<div class="list-item items" data-value="1000">
+				<p class="item-txt">1000</p>
+			</div>
+			<div class="list-item items" data-value="10002">
+				<p class="item-txt">10002</p>
+			</div>
+			<div class="list-item items" data-value="1009">
+				<p class="item-txt">1009</p>
+			</div>
+			<div class="list-item items" data-value="10293">
+				<p class="item-txt">10293</p>
+			</div>
+			<div class="list-item items" data-value="1234">
+				<p class="item-txt">1234</p>
+			</div>
+			<div class="list-item items" data-value="1456">
+				<p class="item-txt">1456</p>
+			</div>
+			<div class="list-item items" data-value="1235">
+				<p class="item-txt">1235</p>
+			</div>
+			<div class="list-item items" data-value="1098">
+				<p class="item-txt">1098</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--联系人选择浮层-->
+<div id="contactDlg" class="dialog none">
+	<div class="dl-content contactContent" data-name="contact">
+		<div class="dl-search">
+			<input class="search-ipt" placeholder="Search">
+			<i class="dls-icon icon-search"></i>
+		</div>
+		<div class="dl-list-wrap">
+			<div class="list-item items" data-value="HTC">
+				<p class="item-txt">HTC</p>
+			</div>
+			<div class="list-item items" data-value="Peter">
+				<p class="item-txt">Peter</p>
+			</div>
+			<div class="list-item items" data-value="Peter 001">
+				<p class="item-txt">Peter 001</p>
+			</div>
+			<div class="list-item items" data-value="Peter 003">
+				<p class="item-txt">Peter 003</p>
+			</div>
+			<div class="list-item items" data-value="Peter 004">
+				<p class="item-txt">Peter 004</p>
+			</div>
+			<div class="list-item items" data-value="Peter 005">
+				<p class="item-txt">Peter 005</p>
+			</div>
+			<div class="list-item items" data-value="HTC 001">
+				<p class="item-txt">HTC 001</p>
+			</div>
+			<div class="list-item items" data-value="HTC 009">
+				<p class="item-txt">HTC 009</p>
+			</div>
+			<div class="list-item items" data-value="HTC 090">
+				<p class="item-txt">HTC 090</p>
+			</div>
+			<div class="list-item items" data-value="HTC 019">
+				<p class="item-txt">HTC 019</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--员工选择浮层-->
+<div id="employeesDlg" class="dialog none">
+	<div class="dl-content employeesContent" data-name="employees">
+		<div class="dl-search">
+			<input class="search-ipt" placeholder="Search">
+			<i class="dls-icon icon-search"></i>
+		</div>
+		<div class="dl-list-wrap">
+			<div class="list-item items" data-value="US_ICAGENT">
+				<p class="item-txt">US_ICAGENT</p>
+				<p class="f666 f12">234234</p>
+			</div>
+			<div class="list-item items" data-value="DE_ICAGENT">
+				<p class="item-txt">US_ICAGENT</p>
+				<p class="f666 f12">12323</p>
+			</div>
+			<div class="list-item items" data-value="DE_ICMAN">
+				<p class="item-txt">DE_ICMAN</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--货币选择浮层-->
+<div id="currencyDlg" class="dialog none">
+	<div class="dl-content currencyContent" data-name="currency">
+		<div class="dl-search">
+			<input class="search-ipt" placeholder="Search">
+			<i class="dls-icon icon-search"></i>
+		</div>
+		<div class="dl-list-wrap">
+			<div class="list-item items" data-value="人民币">
+				<p class="item-txt">人民币</p>
+				<p class="f666 f12">RMB</p>
+			</div>
+			<div class="list-item items" data-value="美元">
+				<p class="item-txt">美元</p>
+				<p class="f666 f12">$</p>
+			</div>
+			<div class="list-item items" data-value="日元">
+				<p class="item-txt">日元</p>
+				<p class="f666 f12">11122</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--选择组织-->
+<div id="organDlg" class="dialog none">
+	<div class="dl-content organContent" data-name="organ">
+		<div class="dl-search">
+			<input class="search-ipt" placeholder="Search">
+			<i class="dls-icon icon-search"></i>
+		</div>
+		<div class="dl-list-wrap">
+			<div class="list-item items" data-value="组织1">
+				<p class="item-txt">组织1</p>
+			</div>
+			<div class="list-item items" data-value="组织2">
+				<p class="item-txt">组织2</p>
+			</div>
+			<div class="list-item items" data-value="组织3">
+				<p class="item-txt">组织3</p>
+			</div>
+		</div>
+	</div>
+</div>
+
 <script src="src/lib/jquery/jquery,qw.core.js"></script>
 <script src="src/lib/jquery/jquery-form.js"></script>
 <script src="src/lib/jquery/jquery-blockUI.js"></script>
+<script src="src/lib/jquery/jquery-ui.js"></script>
+<script src="src/lib/jquery/jquery-ui-datepicker-zh-CN.js"></script>
+<script src="src/lib/jquery/jquery-ui-timepicker-addon.js"></script>
+<script src="src/lib/jquery/jquery-ui-timepicker-zh-CN.js"></script>
 <script src="src/common.js"></script>
 <script src="src/opportunity.js"></script>
 </body>
 </html>
-
