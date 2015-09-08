@@ -5,9 +5,10 @@
 	function initHandle() {
 		//底部初始化
 		var handle = $('#btmHandle');
-		var add = $('#btmAdd');
+		var group = $('#btmGroup');
 		//列表分类搜索操作
 		gl.initBottom(handle);
+		gl.initBottom(group);
 	}
 	
 
