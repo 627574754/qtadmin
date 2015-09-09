@@ -1354,6 +1354,18 @@ th {
 .check-price-wrap .form-wrap {
   margin: 0;
 }
+.check-price-wrap .form-wrap .button {
+  padding: 10px 30px;
+  background: none;
+  border: 1px solid #C0C0C0;
+}
+.check-price-wrap .form-wrap .button:hover {
+  background-color: rgba(222, 222, 222, 0.5);
+}
+.check-price-wrap .form-wrap .button:active {
+  background-color: #007AC3;
+  color: #fff;
+}
 /*dialog*/
 .ui-dialog-mask {
   display: none;
