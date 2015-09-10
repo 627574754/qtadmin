@@ -7,7 +7,7 @@
 </head>
 <body>
  <link rel="import" href="_header.html?__inline">
-<div class="container container-act cntPage" style="left:200%;">
+<div class="container container-act cntPage">
 	<div class="page-title">
 		<a href="list.html" class="i-back icon-forward icon-todo"></a>
 		<div class="txc">我的账号(10)</div>
@@ -203,13 +203,13 @@
 <!--详情页-->
 <div class="container container-act cntPage" style="left:200%;">
 	<div class="page-title">
-		<i id="backList" class="i-back icon-forward icon-todo pter"></i>
+		<i data-pg="0" class="i-back icon-forward icon-todo pter jumpBtn"></i>
 		<div class="txc">我的账号</div>
 	</div>
 	<div class="act-cnt">
 		<div class="page-bottom">
 			<div class="btm-right">
-				<a href="#" class="btm-link">编辑</a>
+				<a href="#" class="btm-link jumpBtn" data-pg="2">编辑</a>
 			</div>
 		</div>
 		<div class="cnt-wrap1">
@@ -266,16 +266,16 @@
 	</div>
 </div>
 <!--编辑页-->
-<div class="container container-act cntPage">
+<div class="container container-act cntPage" style="left:200%;">
 	<div class="page-title">
-		<i id="backList" class="i-back icon-forward icon-todo pter"></i>
+		<i data-pg="1" class="i-back icon-forward icon-todo pter jumpBtn"></i>
 		<div class="txc">我的账号</div>
 	</div>
 	<div class="act-cnt">
 		<div class="page-bottom">
 			<div class="btm-right">
-				<a href="#" class="btm-link">保存</a>
-				<a href="#" class="btm-link">取消</a>
+				<a href="#" class="btm-link jumpBtn" data-pg="1">保存</a>
+				<a href="#" class="btm-link jumpBtn" data-pg="1">取消</a>
 			</div>
 		</div>
 		<div class="cnt-wrap2">
@@ -285,7 +285,7 @@
 					<div class="form-group">
 						<label class="f-label">姓名1:</label>
 						<div class="form-item">
-							<div class="input-control"><input type="text" name="" placeholder="请输入名称" /></div></div>
+							<div class="input-control"><input type="text" name="" placeholder="请输入名称" value="美国爱琴电脑" /></div></div>
 					</div>
 					<div class="form-group">
 						<label class="f-label">姓名2:</label>
@@ -319,7 +319,7 @@
 					<div class="form-group">
 						<label class="f-label">员工义务:</label>
 						<div class="form-item">
-							<div class="input-group"><input type="text" name="employees" /><i class="input-link  icon-attach-1 iptGroup" data-name="employees" data-title="员工"></i></div>
+							<div class="input-group"><input type="text" name="employees" value="US_ICAGENT" /><i class="input-link  icon-attach-1 iptGroup" data-name="employees" data-title="员工"></i></div>
 						</div>
 					</div>
 				</div>
@@ -328,38 +328,38 @@
 					<div class="form-group">
 						<label class="f-label">国家:</label>
 						<div class="form-item">
-							<div class="input-group"><input type="text" name="country" /><i class="input-link  icon-attach-1 iptGroup" data-name="country" data-title="国家"></i></div>
+							<div class="input-group"><input type="text" name="country" value="中国" /><i class="input-link  icon-attach-1 iptGroup" data-name="country" data-title="国家"></i></div>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="f-label">地区:</label>
 						<div class="form-item">
-							<div class="input-group"><input type="text" name="region" /><i class="input-link  icon-attach-1 iptGroup" data-name="region" data-title="地区"></i></div>
+							<div class="input-group"><input type="text" name="region" value="重庆" /><i class="input-link  icon-attach-1 iptGroup" data-name="region" data-title="地区"></i></div>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="f-label">邮政编码/城市:</label>
 						<div class="form-item">
-							<div class="input-control3"><input type="text" name=""  /></div>
-							<div class="input-group input-control4 fr"><input type="text" name="" /></div>
+							<div class="input-control3"><input type="text" name="" value="400000"  /></div>
+							<div class="input-group input-control4 fr"><input type="text" name="" value="123" /></div>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="f-label">联系电话:</label>
 						<div class="form-item">
-							<div class="input-group"><input type="text" name="contact" /></div>
+							<div class="input-group"><input type="text" name="contact" value="15730193845"/></div>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="f-label">邮箱:</label>
 						<div class="form-item">
-							<div class="input-group"><input type="text" name="email" /></div>
+							<div class="input-group"><input type="text" name="email" value="ides_adcom@mail.cl1.sap.biz" /></div>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="f-label">站点:</label>
 						<div class="form-item">
-							<div class="input-group"><input type="text" name="website" /></div>
+							<div class="input-group"><input type="text" name="website" value="www.ides-adcom.com" /></div>
 						</div>
 					</div>
 				</div>
@@ -370,6 +370,87 @@
 	</div>
 </div>
 <link rel="import" href="_footer.html?__inline">
+<!--员工义务选择浮层-->
+<div id="employeesDlg" class="dialog none">
+	<div class="dl-content employeesContent" data-name="employees">
+		<div class="dl-search">
+			<input class="search-ipt" placeholder="Search">
+			<i class="dls-icon icon-search"></i>
+		</div>
+		<div class="dl-list-wrap">
+			<div class="list-item items" data-value="US_ICAGENT">
+				<p class="item-txt">US_ICAGENT</p>
+				<p class="f666 f12">234234</p>
+			</div>
+			<div class="list-item items" data-value="DE_ICAGENT">
+				<p class="item-txt">US_ICAGENT</p>
+				<p class="f666 f12">12323</p>
+			</div>
+			<div class="list-item items" data-value="DE_ICMAN">
+				<p class="item-txt">DE_ICMAN</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--国家选择浮层-->
+<div id="countryDlg" class="dialog none">
+	<div class="dl-content countryContent" data-name="country">
+		<div class="dl-search">
+			<input class="search-ipt" placeholder="Search">
+			<i class="dls-icon icon-search"></i>
+		</div>
+		<div class="dl-list-wrap">
+			<div class="list-item items" data-value="中国">
+				<p class="item-txt">中国</p>
+			</div>
+			<div class="list-item items" data-value="美国">
+				<p class="item-txt">美国</p>
+			</div>
+			<div class="list-item items" data-value="日本">
+				<p class="item-txt">日本</p>
+			</div>
+			<div class="list-item items" data-value="韩国">
+				<p class="item-txt">韩国</p>
+			</div>
+			<div class="list-item items" data-value="加拿大">
+				<p class="item-txt">加拿大</p>
+			</div>
+			<div class="list-item items" data-value="德国">
+				<p class="item-txt">德国</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--地区选择浮层-->
+<div id="regionDlg" class="dialog none">
+	<div class="dl-content regionContent" data-name="region">
+		<div class="dl-search">
+			<input class="search-ipt" placeholder="Search">
+			<i class="dls-icon icon-search"></i>
+		</div>
+		<div class="dl-list-wrap">
+			<div class="list-item items" data-value="重庆">
+				<p class="item-txt">重庆</p>
+			</div>
+			<div class="list-item items" data-value="北京">
+				<p class="item-txt">北京</p>
+			</div>
+			<div class="list-item items" data-value="上海">
+				<p class="item-txt">上海</p>
+			</div>
+			<div class="list-item items" data-value="广州">
+				<p class="item-txt">广州</p>
+			</div>
+			<div class="list-item items" data-value="杭州">
+				<p class="item-txt">杭州</p>
+			</div>
+			<div class="list-item items" data-value="四川">
+				<p class="item-txt">四川</p>
+			</div>
+		</div>
+	</div>
+</div>
 
 <script src="src/lib/jquery/jquery,qw.core.js"></script>
 <script src="src/lib/jquery/jquery-form.js"></script>
