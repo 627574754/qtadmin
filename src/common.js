@@ -189,7 +189,7 @@ $.extend(gl, function(){
 			list.fadeIn('fast');
 		});
 		$('body').click(function(e){
-			if (list && handle[0] !== e.target && !($.contains(list[0], e.target))) {
+			if (list && handle[0] !== e.target && !($.contains(list[0], e.target)) && !($.contains(handle[0], e.target))) {
 				list.hide();
 			}
 		});

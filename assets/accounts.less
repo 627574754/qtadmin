@@ -2,7 +2,8 @@
 	position: absolute;
 	top: 48px;
 	bottom: 48px;
-	width: 100%;
+	left: 0;
+	right: 0;
 	.act-cnt {
 		position: absolute;
 		top: 45px;
@@ -75,6 +76,7 @@
 					padding: 12px;
 					width: 29%;
 					background: #FFF;
+					cursor: pointer;
 					.item-top {
 						text-align: left;
 						margin-bottom: 20px;
@@ -109,4 +111,85 @@
 			}
 		}
 	}
+}
+/*账号详情页*/
+.cnt-wrap1{
+	position: absolute;
+	top: 0px;
+	bottom: 48px;
+	width: 100%;
+	overflow-y: auto;
+}
+.detail-head-wrap {
+	background: #DBEEF1;
+	position: relative;
+	height: 105px;
+	.head-left {
+		position: absolute;
+		left: 20px;
+		top: 20px;
+		.head-icon {
+			width: 43px;
+			line-height: 30px;
+			font-size: 30px;
+			color: #666666;
+			display: inline-block;
+			vertical-align: top;
+			text-align: center;
+		}
+		.head-title {
+			color: #000000;
+			font-size: 18px;
+			display: inline-block;
+		}
+	}
+	.head-right {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		text-align: right;
+		.right-txt {
+			padding: 0 20px;
+			font-size: 28px;
+			display: inline-block;
+			text-align: center;
+			color: #666666;
+		}
+	}
+}
+.head-btn-wrap {
+	background: #DBEEF1;
+	height: 40px;
+	padding: 0 0 5px 45px;
+	position: relative;
+	.head-btn {
+		color: #000000;
+		font-size: 14px;
+		width: 160px;
+		position: relative;
+		height: 40px;
+		line-height: 40px;
+		cursor: pointer;
+		.btn-icon {
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: #FFF;
+			color: #666666;
+			text-align: center;
+			font-size: 16px;
+		}
+		&:hover {
+			.btn-icon {
+				background: #EEEEEE;
+			}
+		}
+	}
+}
+.detail-cnt-wrap {
+	background: #FFF;
+	padding: 20px;
+
 }
