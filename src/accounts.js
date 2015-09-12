@@ -30,7 +30,7 @@
 			},300);
 			curPage.addClass('moving');
 			curPage.animate({left: '0px'}, 300);
-		})
+		});
 		//返回列表页
 		var jumpBtn = $('.jumpBtn');
 		jumpBtn.on('click', function() {

@@ -49,7 +49,7 @@
 			var icon = icon || 'animate-spin icon-spin3 fblue';
 			var time = time || 'Uploading';
 			var container = $('#attchWrap .list-title');
-			var tmp = '<div class="aths-item-wrap" id="'+id+'"><div class="lt-l f30 '+icon+'"></div><div class="aths-item"><a href="#" class="fblue">'+name+'</a><p>'+time+'</p></div><div class="lt-r"><i class="aths-icon-edit icon-pencil"></i><i class="aths-icon-del icon-cancel"></i></div></div>';
+			var tmp = '<div class="aths-item-wrap" id="'+id+'"><div class="lt-l f30 '+icon+'"></div><div class="aths-item"><a href="#" class="fblue">'+name+'</a><p>'+time+'</p></div><div class="lt-r"><i class="aths-icon-edit icon-pencil attchEdit"></i><i class="aths-icon-del icon-cancel attchDel"></i></div></div>';
 			$(tmp).insertAfter(container);
 		}
 	}
@@ -66,6 +66,14 @@
 		ipt.toggleClass('none');
 		txt.toggleClass('none');
 		$(this).toggleClass('icon-cog-outline');
+	});
+	//attachments 删除
+	$('#attchWrap').on('click','.attchDel',function(){
+		var me = $(this);
+		var item = $(this).parents('.aths-item-wrap');
+		new gl.Dialog.confirm('确定删除选中数据?','删除提示',function(){
+			item.remove();
+		});
 	});
 	//初始化页面
 	function initHandle() {
