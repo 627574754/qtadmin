@@ -1,5 +1,7 @@
 (function(){
 	var gl = window.gl;
+	
+	var iptDlgs = {};
 
 	//tab切换
 	function tabSwitch() {
@@ -53,6 +55,81 @@
 			$(tmp).insertAfter(container);
 		}
 	}
+	
+	//初始化输入框组
+	function initIptGroup() {
+		var iptGroups = $('.iptGroup');
+		iptGroups.on('click', function(){
+			var name = $(this).data('name');
+			iptDlgs[name].open();
+		});
+		for (var i = iptGroups.length - 1; i >= 0; i--) {
+			var el = $(iptGroups[i]);
+			var name = el.data('name');
+			var dlg = $('#' + name + 'Dlg');
+			var title = el.data('title');
+			var tmp = dlg.html();
+			iptDlgs[name] = new gl.Dialog({
+				title: title, 
+				content: tmp,
+				width: '40%' //窗口宽度，如不传递默认为40%
+			});
+			var cnt = $('.ui-dialog-pop .'+name +'Content');
+			$('.items', cnt).on('click', function(){
+				var n = $(this).parents('.dl-content').data('name');
+				var ipt = $('input[name="'+n+'"]');
+				var val = $(this).data('value');
+				iptDlgs[n].close();
+				ipt.val(val);
+			});
+		};
+	}
+	//页面切换
+	function pageSwitch() {
+		var pages = $('.cntPage');
+		//返回列表页
+		var jumpBtn = $('.jumpBtn');
+		jumpBtn.on('click', function() {
+			var i = $(this).data('pg');
+			var curPage = pages.eq(i);  //返回页面
+			setTimeout(function(){
+				pages.not(curPage).css('left','200%');
+				curPage.removeClass('moving');
+			},300);
+			curPage.addClass('moving');
+			curPage.animate({left: '320px'}, 300);
+		});
+		//编辑取消
+		var btnCancel = $('.btnCancel');
+		btnCancel.on('click', function() {
+			var btn = $(this);
+			new gl.Dialog.confirm('放弃编辑?','提示',function(){
+				var i = btn.data('pg');;  
+				console.log(i)
+				var curPage = pages.eq(i);  //返回的页面
+				console.log(curPage)
+				setTimeout(function(){
+					pages.not(curPage).css('left','200%');
+					curPage.removeClass('moving');
+				},300);
+				curPage.addClass('moving');
+				curPage.animate({left: '320px'}, 300);
+			});
+		});
+	}
+	//初始化页面
+	function initHandle() {
+		//初始化下拉框
+		gl.initSelect();
+
+		//底部初始化
+		var handle = $('#btmHandle');
+		var filter = $('#btmFilter');
+		//列表分类搜索操作
+		gl.initBottom(handle);
+		//筛选 全部/打开
+		gl.initBottom(filter);
+	}
 	//attachments 编辑
 	$('#attchWrap').on('click','.attchEdit',function(){
 		var me = $(this);
@@ -75,24 +152,18 @@
 			item.remove();
 		});
 	});
-	//初始化页面
-	function initHandle() {
-		//底部初始化
-		var handle = $('#btmHandle');
-		var filter = $('#btmFilter');
-		//列表分类搜索操作
-		gl.initBottom(handle);
-		//筛选 全部/打开
-		gl.initBottom(filter);
-	}
 	
 
 	//初始化tab切换
 	tabSwitch();
+	//页面切换
+	pageSwitch();
 	//attachments 上传文件
 	fileUpload();
 	//初始化页面
-	initHandle()
+	initHandle();
+	//初始化input框
+	initIptGroup();
 
 })();
 
