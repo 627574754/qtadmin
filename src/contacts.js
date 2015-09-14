@@ -157,7 +157,13 @@
 		gl.initBottom(filter);
 	}
 	
-
+	gl.block(function() {
+		setTimeout(function() {
+			$.unblockUI();
+		},1000);
+	});
+	gl.initPop();
+	
 	//初始化tab切换
 	tabSwitch();
 	//attachments 上传文件

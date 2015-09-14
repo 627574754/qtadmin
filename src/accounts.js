@@ -73,6 +73,12 @@
 		};
 	}
 	
+	gl.block(function() {
+		setTimeout(function() {
+			$.unblockUI();
+		},1000);
+	});
+	gl.initPop();
 	
 	//初始化页面
 	initHandle();

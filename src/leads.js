@@ -153,7 +153,13 @@
 		});
 	});
 	
-
+	gl.block(function() {
+		setTimeout(function() {
+			$.unblockUI();
+		},1000);
+	});
+	gl.initPop();
+	
 	//初始化tab切换
 	tabSwitch();
 	//页面切换

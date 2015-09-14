@@ -256,6 +256,14 @@
 			}
 		});
 	}
+	
+	gl.block(function() {
+		setTimeout(function() {
+			$.unblockUI();
+		},1000);
+	});
+	gl.initPop();
+
 	initDialog();
 	//初始化tab切换
 	tabSwitch();
