@@ -33,7 +33,7 @@
         addDlg.$root.find('.j_ok').on('click', function(){
             addDlg.close();
         });
-        //addDlg.open();
+        addDlg.open();
 	}
 
     function bindEvents(){
