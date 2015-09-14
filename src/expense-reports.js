@@ -95,6 +95,13 @@
 
     bindEvents();
 
+    gl.block(function() {
+        setTimeout(function() {
+            $.unblockUI();
+        },1000);
+    });
+    gl.initPop();
+
 
     //gl.Dialog.error('人员编号123由用户USER12锁定', function(){alert(1)});
 
